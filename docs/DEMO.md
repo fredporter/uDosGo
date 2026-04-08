@@ -6,6 +6,8 @@ One **gold-path** flow for README, screenshots, a short launch video, contributo
 
 ---
 
+**Optional:** when submitting from ThinUI, you can set a **USXD / layout handle** (`surfaceRef`); it is stored on the feed and appears on the first `feed.received` event.
+
 ## The loop (canonical)
 
 1. User submits an item (URL, note, email-like text, or short request).

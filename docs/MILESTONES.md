@@ -10,6 +10,8 @@
 
 **v3.0.3 — M7 (USXD multi-file validation) — complete (2026-04-09).** `validate:usxd` globs `examples/`; see [BACKLOG.md](BACKLOG.md).
 
+**v3.0.3 — M8 (dev backlog closure) — complete (2026-04-09).** Feed `metadata.surfaceRef`, SSE/persistence decisions recorded, optional [media/README.md](media/README.md).
+
 ---
 
 ## Overview
@@ -23,6 +25,7 @@
 | M5 | v3.0.2 P0 | Job runner limits + structured failures; SSE resilience; persistence decision | Done |
 | M6 | v3.0.2 P1–P2 | Second demo scenario (inbox thread); DEMO + seed scripts; repo split prep doc | Done |
 | M7 | v3.0.3 hygiene | USXD AJV validates every surface JSON under `examples/`; minimal second fixture | Done |
+| M8 | v3.0.3 closure | Feed `surfaceRef`; backlog/roadmap/DATA-MODEL aligned; demo media drop zone | Done |
 
 ---
 
@@ -132,3 +135,15 @@ All nine **checked** → **v3.0.1 complete**.
 - [x] Second fixture: `examples/usxd-surface-minimal.example.json` (schema floor).
 
 **Exit:** `npm run build` still starts with `validate:usxd`; adding new surface examples under `examples/` is caught in CI without editing the script.
+
+---
+
+## M8 — v3.0.3 dev backlog closure
+
+- [x] Optional **`metadata.surfaceRef`** on `POST /api/v1/feed/items`; persisted on feed; **`feed.received`** payload; ThinUI optional field ([ARCHITECTURE.md](ARCHITECTURE.md), [DATA-MODEL.md](DATA-MODEL.md)).
+- [x] **SSE:** explicit decision to keep current SSE + reconnect (no WebSocket) unless a blocker is filed.
+- [x] **Persistence:** JSON through v3.0.3 reaffirmed in [DATA-MODEL.md](DATA-MODEL.md); SQLite remains post-scope.
+- [x] **Optional marketing:** [docs/media/README.md](media/README.md) for screenshot/video drops.
+- [x] **uDOS-dev roadmap feed:** `v3-feed.md` doc migration + `uDOS-docs` v2 layout entries marked **done** (sibling **uDOS-dev** repo).
+
+**Exit:** [BACKLOG.md](BACKLOG.md) has no active tranche; new work starts a **v3.0.4+** or family plan entry.

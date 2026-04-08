@@ -157,7 +157,7 @@ Base URL: `http://127.0.0.1:8787` (or `PORT` / `UDOS_DATA_ROOT` as configured). 
 |--------|------|---------|
 | `GET` | `/health`, `/api/v1/health` | Liveness + `dataRoot`, version |
 | `GET` | `/api/v1/feed/items` | List feed items |
-| `POST` | `/api/v1/feed/items` | Submit feed item (`raw`, optional `uri`, `source`); runs pipeline (Hivemind + tools) |
+| `POST` | `/api/v1/feed/items` | Submit feed item (`raw`, optional `uri`, `source`, optional `metadata.surfaceRef`); runs pipeline (Hivemind + tools); `feed.received` echoes `surfaceRef` when set |
 | `GET` | `/api/v1/tasks` | List tasks |
 | `GET` | `/api/v1/events?limit=` | Recent events (tail of `events/log.json`) |
 | `GET` | `/api/v1/events/stream` | **SSE** (`text/event-stream`): `event: snapshot` then `event: append` per new event |

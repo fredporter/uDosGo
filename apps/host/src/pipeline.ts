@@ -101,7 +101,13 @@ export async function processFeedPipeline(
     type: "feed.received",
     feedId: feed.id,
     actor: "user",
-    payload: { source: feed.source, bytes: feed.raw.length },
+    payload: {
+      source: feed.source,
+      bytes: feed.raw.length,
+      ...(typeof feed.metadata?.surfaceRef === "string"
+        ? { surfaceRef: feed.metadata.surfaceRef }
+        : {}),
+    },
   });
 
   const classified = stores.updateFeedItem(feed.id, {

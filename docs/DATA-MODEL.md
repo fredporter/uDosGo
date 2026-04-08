@@ -85,9 +85,13 @@ When `tool.failed` fires, `payload` includes:
 
 Common `code` values: `tool_timeout`, `unknown_tool`, `io_error`, `resource_cap_exceeded`, `internal_error`.
 
-## Persistence choice (v3.0.2)
+## Persistence choice (v3.0.2 / v3.0.3)
 
-**Decision:** Keep **JSON files** under `.udos-data` for feed, tasks, and events through v3.0.2. **SQLite** (or another single-DB consolidation) remains a later optimization if tail latency or file sprawl becomes painful; track in [BACKLOG.md](BACKLOG.md) if scope changes.
+**Decision:** Keep **JSON files** under `.udos-data` for feed, tasks, and events through **v3.0.3**. **SQLite** (or single-DB consolidation) stays a **later** optimization when tail latency or multi-process contention justifies it; reopen in a numbered plan if scope changes.
+
+## Feed metadata — `surfaceRef` (v3.0.3)
+
+Optional **`metadata.surfaceRef`** on feed items (set via `POST /api/v1/feed/items` or ThinUI). Host validates an opaque string (no `..`, length-capped) and persists it on the feed row. **`feed.received`** includes `surfaceRef` in its payload when present so the event log correlates layout/USXD handles with intake. Serving surface JSON by ref is **not** part of the Host API in this tranche (clients resolve handles locally or via future endpoints).
 
 ## Event types (suggested baseline)
 

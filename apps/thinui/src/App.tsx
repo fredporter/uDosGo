@@ -35,6 +35,7 @@ export function App() {
     { path: string; bytes: number; mtimeMs: number }[]
   >([]);
   const [draft, setDraft] = useState("");
+  const [surfaceRef, setSurfaceRef] = useState("");
   const [busy, setBusy] = useState(false);
   const [rerunningId, setRerunningId] = useState<string | null>(null);
   const [live, setLive] = useState<
@@ -221,7 +222,13 @@ export function App() {
     setBusy(true);
     setError(null);
     try {
-      await client.submitFeedItem({ raw, source: "thinui" });
+      await client.submitFeedItem({
+        raw,
+        source: "thinui",
+        ...(surfaceRef.trim()
+          ? { metadata: { surfaceRef: surfaceRef.trim() } }
+          : {}),
+      });
       setDraft("");
       await refresh();
     } catch (e) {
@@ -229,7 +236,7 @@ export function App() {
     } finally {
       setBusy(false);
     }
-  }, [draft, refresh]);
+  }, [draft, surfaceRef, refresh]);
 
   const restrictedUrl =
     wpBase && wpBase.length > 0
@@ -290,6 +297,18 @@ export function App() {
             onChange={(e) => setDraft(e.target.value)}
             disabled={busy}
           />
+          <div className="feed-surface-ref muted">
+            <span>Optional USXD / layout handle (feed + `feed.received` event):</span>
+            <input
+              className="input input-inline"
+              type="text"
+              placeholder="e.g. usxd-surface-canonical"
+              value={surfaceRef}
+              onChange={(e) => setSurfaceRef(e.target.value)}
+              disabled={busy}
+              autoComplete="off"
+            />
+          </div>
           <div className="row">
             <button
               type="button"
@@ -312,6 +331,12 @@ export function App() {
                       <div className="feed-meta">
                         intent:{" "}
                         <code>{String(it.classification.intent)}</code>
+                      </div>
+                    ) : null}
+                    {typeof it.metadata?.surfaceRef === "string" ? (
+                      <div className="feed-meta">
+                        surfaceRef:{" "}
+                        <code>{it.metadata.surfaceRef}</code>
                       </div>
                     ) : null}
                     <div className="feed-raw">{it.raw}</div>

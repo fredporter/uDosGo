@@ -144,6 +144,17 @@ button:hover {
   margin-top: 10px;
 }
 
+.feed-surface-ref {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.feed-surface-ref .input-inline {
+  margin-top: 0;
+}
+
 .feed-list {
   margin: 14px 0 0;
   padding-left: 1.1rem;

@@ -27,20 +27,23 @@ Shipped capabilities (summary):
 | P1 | Inbox / email-thread scenario, `thread-*.md` vault stem, `demo:seed:inbox`, [DEMO.md](DEMO.md) scenario B |
 | P2 prep | [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) extraction checklist (no in-repo split) |
 
+## Closed: v3.0.3 (backlog closure tranche)
+
+**Status:** **Complete** (2026-04-09). See [MILESTONES.md](MILESTONES.md) M7–M8.
+
+| Item | Outcome |
+|------|---------|
+| USXD multi-file validation | `npm run validate:usxd` walks `examples/`; `validate:usxd:verbose` |
+| SSE follow-up | **No change:** SSE + client reconnect remain default; WebSocket / filtering only if a filed ThinUI blocker appears |
+| Persistence follow-up | **Reaffirmed:** JSON through v3.0.3; SQLite deferred ([DATA-MODEL.md](DATA-MODEL.md)) |
+| Host `surfaceRef` / layout metadata | `metadata.surfaceRef` on feed POST, `feed.received` payload, ThinUI optional field ([ARCHITECTURE.md](ARCHITECTURE.md)) |
+| Optional marketing assets | Drop zone + checklist pointer: [docs/media/README.md](media/README.md) (binaries optional, gitignored by convention) |
+
 ## Optional (non-blocking)
 
-- Marketing assets: PNG/video from [DEMO.md](DEMO.md) screenshot checklist.
+- Add PNG/video under `docs/media/` when you capture them ([DEMO.md](DEMO.md) checklist); see [docs/media/README.md](media/README.md).
 
 **Steps 8–9 prep:** `npm run demo:wp-bootstrap` and `npm run demo:wp-link` (see [DEMO.md](DEMO.md) § Steps 8–9).
-
-## Active: v3.0.3 candidates
-
-Small follow-ups after v3.0.2 closure; does **not** include depth roadmap (see below).
-
-- [x] **USXD validation:** `npm run validate:usxd` walks `examples/**/*.json` and validates every document with `schemaVersion: usxd/0.1` + `type: surface` (see [MILESTONES.md](MILESTONES.md) M7).
-- [ ] **SSE:** optional event filtering or WebSocket only if a concrete ThinUI blocker appears ([ROADMAP.md](ROADMAP.md)).
-- [ ] **Persistence:** SQLite / single-DB consolidation if JSON tail latency or sprawl hurts ([DATA-MODEL.md](DATA-MODEL.md) decision can be revisited).
-- [ ] **Host:** optional `surfaceRef` or embedded layout metadata for USXD beyond ThinUI ([ROADMAP.md](ROADMAP.md)).
 
 ## Beyond v3.0.x — explicitly deferred
 
@@ -48,6 +51,7 @@ Not scheduled in this backlog; tracked for positioning only:
 
 - Sync engine, beacon networking, MCP registry / marketplace, mobile clients, App Store, full family module parity.
 - WordPress multisite / enterprise CRM / full bi-directional Empire sync.
+- SQLite / DB-backed spool without a new scope bump.
 
 ## Tracking rule
 

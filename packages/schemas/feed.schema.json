@@ -27,7 +27,17 @@
       },
       "additionalProperties": true
     },
-    "metadata": { "type": "object", "additionalProperties": true },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "surfaceRef": {
+          "type": "string",
+          "maxLength": 256,
+          "description": "Optional opaque USXD / layout handle; validated on POST by Host"
+        }
+      }
+    },
     "createdAt": { "type": "string", "format": "date-time" },
     "updatedAt": { "type": "string", "format": "date-time" }
   },

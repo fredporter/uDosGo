@@ -6,6 +6,7 @@ import { randomUUID } from "node:crypto";
 import { createStores } from "./storage.js";
 import type { EventRecord, FeedItem } from "./storage.js";
 import { processFeedPipeline, rerunTask } from "./pipeline.js";
+import { pickFeedMetadata } from "./feed-metadata.js";
 
 const VERSION = "0.5.0";
 const PORT = Number(process.env.PORT) || 8787;
@@ -281,6 +282,8 @@ async function handleFeedItems(
       uri = (body as { uri: string }).uri.trim();
     }
 
+    const meta = pickFeedMetadata(body);
+
     const now = new Date().toISOString();
     const item: FeedItem = {
       schemaVersion: "1.0.0",
@@ -289,6 +292,7 @@ async function handleFeedItems(
       raw,
       createdAt: now,
       ...(uri ? { uri } : {}),
+      ...(meta ? { metadata: meta } : {}),
     };
 
     const items = stores.readFeedItems();

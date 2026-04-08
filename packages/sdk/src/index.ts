@@ -71,6 +71,8 @@ export type SubmitFeedItemInput = {
   raw: string;
   uri?: string;
   source?: FeedItem["source"];
+  /** Optional; Host whitelists keys (e.g. `surfaceRef` for USXD layout handles). */
+  metadata?: Record<string, unknown>;
 };
 
 export type VaultFileInfo = {

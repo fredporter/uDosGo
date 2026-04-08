@@ -8,6 +8,7 @@
 - **Done (P1):** Second demo scenario (inbox / email-thread intake) + [DEMO.md](DEMO.md) + `demo:seed:inbox`.
 - **Done (P2 prep):** [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) (checklist only; no repo split in-tree).
 - **Done (v3.0.3):** `validate:usxd` validates **all** USXD surface JSON files under `examples/` (not only the canonical file); use `npm run validate:usxd:verbose` to list skipped JSON.
+- **Done (v3.0.3 closure):** Feed `metadata.surfaceRef` + `feed.received`; SSE and JSON persistence decisions recorded; optional demo media folder [docs/media/README.md](docs/media/README.md); [BACKLOG.md](BACKLOG.md) active tranche cleared.
 - ThinUI live updates: optional SSE filtering or WebSocket if a hard blocker appears.
 - SQLite (or single-DB) consolidation for tasks + events if file sprawl hurts (deferred past v3.0.2 P0).
 
@@ -34,7 +35,7 @@
 
 ## Active tranche
 
-Backlog: [BACKLOG.md](BACKLOG.md). **v3.0.2** tranche is closed; **v3.0.3** lists optional follow-ups (USXD glob validation shipped in M7).
+Backlog: [BACKLOG.md](BACKLOG.md). **v3.0.3** is **closed** (M7–M8). New execution work should open a **v3.0.4+** or family plan line in the backlog feed.
 
 Historical execution order for v3.0.2:
 
