@@ -123,6 +123,9 @@ Integrated bootstrap types + sample (legacy `cell` replaced by **tile width/heig
 **[universal_surface_xd_bootstrap.md](../../UniversalSurfaceXD/docs/decisions/universal_surface_xd_bootstrap.md)**  
 **[usxd_udos_integrated_template.md](../../UniversalSurfaceXD/docs/decisions/usxd_udos_integrated_template.md)**
 
+**UX designer (browser-mockup) theme + grid lab:**  
+**[udos-v3-style-bridge.md](../../UniversalSurfaceXD/docs/udos-v3-style-bridge.md)** · lab route `/lab/grid-canon`
+
 ---
 
 ## Region roles (composition)
