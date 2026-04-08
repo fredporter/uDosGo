@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://udos.local/schemas/provider-policy.schema.json",
+  "title": "ProviderPolicy",
+  "type": "object",
+  "required": ["schemaVersion", "id", "defaultProvider", "providers", "budget"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string" },
+    "defaultProvider": {
+      "type": "string",
+      "enum": ["openrouter", "openai", "gemini", "mistral", "local"]
+    },
+    "premiumFallbackProvider": {
+      "type": "string",
+      "enum": ["openrouter", "openai", "gemini", "mistral", "local"]
+    },
+    "cheapestProvider": {
+      "type": "string",
+      "enum": ["openrouter", "openai", "gemini", "mistral", "local"],
+      "description": "Static ordering for demo; may match default"
+    },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "enabled"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": ["openrouter", "openai", "gemini", "mistral", "local"]
+          },
+          "enabled": { "type": "boolean" },
+          "priority": { "type": "integer", "minimum": 0 },
+          "defaultModel": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "budget": {
+      "type": "object",
+      "required": ["currency", "maxUnits", "unit"],
+      "properties": {
+        "currency": { "type": "string", "description": "e.g. USD" },
+        "maxUnits": { "type": "number", "minimum": 0 },
+        "unit": {
+          "type": "string",
+          "enum": ["usd", "token", "request"],
+          "description": "Demo may use token estimate or usd"
+        },
+        "warningThresholdPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "onExhausted": {
+          "type": "string",
+          "enum": ["block_premium", "switch_to_local", "halt", "warn_only"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

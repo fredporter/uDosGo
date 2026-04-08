@@ -1,0 +1,38 @@
+{
+  "name": "udos-v3",
+  "private": true,
+  "description": "uDOS v3.0.1 local-first demo monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n host,thinui -c blue,magenta \"npm run dev -w @udos/host\" \"npm run dev -w @udos/thinui\"",
+    "start": "npm run build && concurrently -n host,thinui -c blue,green \"npm run start -w @udos/host\" \"npm run preview -w @udos/thinui\"",
+    "launch": "node scripts/launch-dev.mjs",
+    "launch:open": "node scripts/launch-dev.mjs --open",
+    "launch:wp": "node scripts/launch-with-wp.mjs",
+    "launch:wp:open": "node scripts/launch-with-wp.mjs --open",
+    "doctor": "node scripts/check-prereqs.mjs --strict",
+    "doctor:docker": "node scripts/check-prereqs.mjs --strict --docker",
+    "storage:init": "node scripts/init-storage.mjs",
+    "wp:up": "docker compose -f infra/docker/compose.yml up -d",
+    "wp:down": "docker compose -f infra/docker/compose.yml down",
+    "wp:logs": "docker compose -f infra/docker/compose.yml logs -f wordpress",
+    "host:start": "npm run start -w @udos/host",
+    "host:dev": "npm run dev -w @udos/host",
+    "thinui:dev": "npm run dev -w @udos/thinui",
+    "build": "npm run build -w @udos/shared && npm run build -w @udos/sdk && npm run build -w @udos/hivemind && npm run build -w @udos/host && npm run build -w @udos/thinui",
+    "demo:seed": "node demo/scripts/seed.mjs",
+    "demo:seed:dry": "node demo/scripts/seed.mjs --dry-run",
+    "demo:wp-bootstrap": "node demo/scripts/wp-bootstrap.mjs",
+    "demo:wp-link": "node demo/scripts/wp-link-demo.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

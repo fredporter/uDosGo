@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://udos.local/schemas/event.schema.json",
+  "title": "Event",
+  "type": "object",
+  "required": ["schemaVersion", "id", "type", "timestamp"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "feed.received",
+        "feed.classified",
+        "task.created",
+        "task.state_changed",
+        "tool.started",
+        "tool.finished",
+        "tool.failed",
+        "provider.request",
+        "provider.response",
+        "budget.warning",
+        "budget.blocked",
+        "review.pass",
+        "review.fail",
+        "review.needs_fix",
+        "wp.contact_linked",
+        "wp.profile_updated"
+      ]
+    },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "feedId": { "type": "string" },
+    "taskId": { "type": "string" },
+    "actor": {
+      "type": "string",
+      "enum": ["user", "host", "hivemind", "wordpress", "system"]
+    },
+    "payload": { "type": "object", "additionalProperties": true },
+    "severity": {
+      "type": "string",
+      "enum": ["debug", "info", "warn", "error"]
+    }
+  },
+  "additionalProperties": false
+}

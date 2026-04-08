@@ -1,0 +1,15 @@
+{
+  "name": "udos-v3",
+  "version": "0.1.0",
+  "scripts": {
+    "host": "node apps/host/src/server.js",
+    "ui": "python3 -m http.server 5173 --directory apps/thinui",
+    "dev": "concurrently \"npm run host\" \"npm run ui\""
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://udos.local/schemas/user-link.schema.json",
+  "title": "UserLink",
+  "type": "object",
+  "required": ["schemaVersion", "id", "contactId", "status", "createdAt"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string" },
+    "contactId": { "type": "string" },
+    "wpUserId": { "type": "integer", "minimum": 1 },
+    "wpLogin": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["linked", "pending", "revoked"]
+    },
+    "reason": { "type": "string" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

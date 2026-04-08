@@ -1,0 +1,3 @@
+Research this topic, create a markdown note, extract 3 tasks, and save everything to the local vault.
+
+(Optional: replace "this topic" with a specific subject or paste a URL on the line below.)

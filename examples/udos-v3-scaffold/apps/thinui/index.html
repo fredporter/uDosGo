@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>uDOS ThinUI</h1>
+<textarea id="input"></textarea><br/>
+<button onclick="send()">Send</button>
+<pre id="output"></pre>
+<script>
+async function send(){
+  const content = document.getElementById('input').value;
+  const res = await fetch('http://localhost:3001/api/feed',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({content})
+  });
+  const data = await res.json();
+  document.getElementById('output').innerText = JSON.stringify(data,null,2);
+}
+</script>
+</body>
+</html>

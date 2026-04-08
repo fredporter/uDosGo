@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://udos.local/schemas/feed.schema.json",
+  "title": "FeedItem",
+  "type": "object",
+  "required": ["schemaVersion", "id", "source", "raw", "createdAt"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string", "description": "ULID or UUID" },
+    "source": {
+      "type": "string",
+      "enum": ["thinui", "api", "import", "wp-bridge", "demo-seed"]
+    },
+    "raw": { "type": "string", "description": "User paste or captured body" },
+    "summary": { "type": "string" },
+    "uri": { "type": "string", "format": "uri", "description": "Optional primary URL" },
+    "classification": {
+      "type": "object",
+      "properties": {
+        "intent": { "type": "string" },
+        "labels": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": true
+    },
+    "metadata": { "type": "object", "additionalProperties": true },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

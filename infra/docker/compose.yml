@@ -1,0 +1,63 @@
+# Local WordPress runtime for uDOS v3 (M1).
+# Data: repo-root `.udos-data/wordpress` (HTML) and `.udos-data/mysql` (database).
+# Run from repository root: `npm run wp:up`
+
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-wordpress}
+      MYSQL_USER: ${MYSQL_USER:-wordpress}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root-local-dev-only}
+    volumes:
+      - ../../.udos-data/mysql:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'mysqladmin ping -h 127.0.0.1 -u root -p"$$MYSQL_ROOT_PASSWORD" || exit 1',
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 15s
+
+  wordpress:
+    image: wordpress:6.7-php8.2-apache
+    restart: unless-stopped
+    ports:
+      - "${WP_PORT:-8080}:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+      WORDPRESS_DEBUG: ${WORDPRESS_DEBUG:-1}
+    volumes:
+      - ../../.udos-data/wordpress:/var/www/html
+      - ../../apps/wordpress-plugin-empire-local:/var/www/html/wp-content/plugins/udos-empire-local
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # One-shot bootstrap: `npm run demo:wp-bootstrap` (requires profile).
+  wpcli:
+    profiles:
+      - bootstrap
+    image: wordpress:cli
+    user: "0:0"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+    volumes:
+      - ../../.udos-data/wordpress:/var/www/html
+      - ../../apps/wordpress-plugin-empire-local:/var/www/html/wp-content/plugins/udos-empire-local
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started

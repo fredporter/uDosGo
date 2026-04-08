@@ -1,0 +1,6 @@
+{
+  "name": "@udos/schemas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JSON Schema drafts (no runtime build)"
+}

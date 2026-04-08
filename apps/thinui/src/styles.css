@@ -1,0 +1,309 @@
+:root {
+  /* Canonical grid tokens: set from @udos/shared in main.tsx (see docs/GRID-GRAPHICS-CANON.md). */
+  --udos-viewport-cols: 80;
+  --udos-viewport-rows: 30;
+  --udos-tile-px-w: 16;
+  --udos-tile-px-h: 24;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.45;
+  color: #e8e8ec;
+  background: #0f1115;
+}
+
+body {
+  margin: 0;
+}
+
+code,
+pre {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+}
+
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.muted {
+  margin: 0;
+  color: #a9b0c0;
+  font-size: 0.92rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #2a3140;
+  background: #1a2030;
+  color: #e8e8ec;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.92rem;
+}
+
+button:hover {
+  border-color: #3b465e;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  border: 1px solid #2a3140;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 180px;
+  background: #141821;
+}
+
+.pre {
+  margin: 8px 0 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #0b0e14;
+  border: 1px solid #222838;
+  overflow: auto;
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.banner {
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #3b2a2a;
+  background: #241a1a;
+  color: #f0c6c6;
+}
+
+.banner.error {
+  border-color: #5c2a2a;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2a3140;
+  background: #0b0e14;
+  color: #e8e8ec;
+  font: inherit;
+  resize: vertical;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4a5a7a;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+.feed-list {
+  margin: 14px 0 0;
+  padding-left: 1.1rem;
+}
+
+.feed-list li {
+  margin-bottom: 12px;
+}
+
+.feed-raw {
+  margin-top: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.feed-meta {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #c8cdd8;
+}
+
+.task-list {
+  margin: 10px 0 0;
+  padding-left: 1.1rem;
+}
+
+.task-list li {
+  margin-bottom: 10px;
+}
+
+.task-title {
+  font-weight: 600;
+}
+
+.task-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-group {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #222838;
+}
+
+.task-group:first-of-type {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.task-group__head {
+  margin-bottom: 6px;
+}
+
+.btn-inline {
+  margin-left: auto;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+.small {
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+.err {
+  color: #f0a8a8;
+}
+
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid #333;
+}
+
+.pill--queued,
+.pill--ready {
+  color: #c9d6ff;
+  border-color: #3d4a6a;
+}
+
+.pill--running {
+  color: #ffe6a8;
+  border-color: #6a5a3d;
+}
+
+.pill--done {
+  color: #b8f0c8;
+  border-color: #3d6a4f;
+}
+
+.pill--failed {
+  color: #ffb8b8;
+  border-color: #6a3d3d;
+}
+
+.pill--blocked {
+  color: #d0c8ff;
+  border-color: #4a3d6a;
+}
+
+.event-log {
+  margin: 0 0 12px;
+  padding-left: 1.2rem;
+  max-height: 280px;
+  overflow: auto;
+  font-size: 0.82rem;
+}
+
+.event-log li {
+  margin-bottom: 4px;
+}
+
+.ev-type {
+  font-size: 0.78rem;
+  color: #a8d4ff;
+}
+
+.panel--output .pre--compact {
+  max-height: 140px;
+}
+
+.provider-strip,
+.vault-strip {
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #222838;
+  background: #0b0e14;
+}
+
+.provider-strip__title,
+.vault-strip__title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8b93a8;
+  margin-bottom: 6px;
+}
+
+.pre--inline {
+  margin: 6px 0 0;
+  padding: 8px;
+  font-size: 0.78rem;
+  max-height: 120px;
+}
+
+.vault-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+}
+
+.vault-list li {
+  margin-bottom: 4px;
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://udos.local/schemas/task.schema.json",
+  "title": "Task",
+  "type": "object",
+  "required": ["schemaVersion", "id", "feedId", "title", "state", "createdAt"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "id": { "type": "string" },
+    "feedId": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "state": {
+      "type": "string",
+      "enum": ["queued", "ready", "running", "blocked", "done", "failed"]
+    },
+    "dependsOn": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Task ids that must complete first"
+    },
+    "toolId": { "type": "string", "description": "Host-registered tool name" },
+    "toolInput": { "type": "object", "additionalProperties": true },
+    "outputRefs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Vault paths or artifact ids"
+    },
+    "error": { "type": "string" },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": { "type": "string", "enum": ["pass", "fail", "needs_fix"] },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
