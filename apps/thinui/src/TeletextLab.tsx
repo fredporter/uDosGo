@@ -94,7 +94,8 @@ export function TeletextLab() {
       </div>
 
       <p className="muted small teletext-lab__doc">
-        Spec: <code>docs/teletext_engine.md</code>, <code>docs/DISPLAY_STACK.md</code>
+        Spec: <code>docs/teletext_engine.md</code>, <code>docs/DISPLAY_STACK.md</code>,{" "}
+        <code>docs/style-guide.md</code>
       </p>
     </div>
   );

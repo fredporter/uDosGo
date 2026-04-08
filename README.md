@@ -20,15 +20,16 @@ Not the whole uDOS family. Not the full product vision. **One clean loop.**
 
 ## Planning documents
 
-**Index:** [docs/README.md](docs/README.md)
+**Full index:** [docs/README.md](docs/README.md) — sections for start-here, system design, **specifications**, **style guide**, delivery, schemas.
 
 | Doc | Purpose |
 |-----|---------|
-| [docs/SCOPE-v3.0.1.md](docs/SCOPE-v3.0.1.md) | In scope / out of scope (locked) |
 | [docs/QUICKSTART.md](docs/QUICKSTART.md) | First-time setup + install/run path |
+| [docs/SCOPE-v3.0.1.md](docs/SCOPE-v3.0.1.md) | In scope / out of scope (locked) |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Boundaries, data flow, module contracts |
-| [docs/GRID-GRAPHICS-CANON.md](docs/GRID-GRAPHICS-CANON.md) | **Locked** 80×30 grid, **16×24** tiles, teletext bridge, UniversalSurfaceXD pairing |
-| [docs/DISPLAY_STACK.md](docs/DISPLAY_STACK.md) | Router for USXD, View/Render/Grid/Teletext/Spatial/Style specs |
+| [docs/specs/README.md](docs/specs/README.md) | **Specifications hub** (USXD, engines, schema paths, ThinUI lab) |
+| [docs/GRID-GRAPHICS-CANON.md](docs/GRID-GRAPHICS-CANON.md) | **Locked** 80×30, **16×24**, teletext bridge, UniversalSurfaceXD pairing |
+| [docs/style-guide.md](docs/style-guide.md) | **Style guide** — tokens, typography, USXD `usxd/0.1` frontmatter, ASCII vs teletext |
 | [docs/DEMO.md](docs/DEMO.md) | Gold-path scenario, expected outputs, operator steps |
 | [docs/DATA-MODEL.md](docs/DATA-MODEL.md) | Persistence layout, schemas, truth model |
 | [docs/WP-BRIDGE.md](docs/WP-BRIDGE.md) | Empire ↔ WordPress bridge design |

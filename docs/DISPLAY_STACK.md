@@ -2,7 +2,8 @@
 
 **Status:** cross-doc index  
 **Confirmed:** 2026-04-09  
-**Canon:** [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md)
+**Canon:** [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md)  
+**Specs hub:** [specs/README.md](specs/README.md) · **Style:** [style-guide.md](style-guide.md)
 
 This file is the **router** for the display / layout / render documentation set. All documents below agree on the **three-layer scale model**:
 
@@ -25,7 +26,7 @@ This file is the **router** for the display / layout / render documentation set.
 5. [grid_engine.md](grid_engine.md) — spatial layout, snap, collision, layers (resolution-independent).
 6. [spatial_map_spec.md](spatial_map_spec.md) — named maps, regions, markers (abstract coordinates).
 7. [teletext_engine.md](teletext_engine.md) — 16×24 cell, 2×3 mosaic, Acorn-style blocks.
-8. [u_dos_v_3_style_guide.md](u_dos_v_3_style_guide.md) — colours, typography, naming, ASCII vs teletext posture.
+8. [style-guide.md](style-guide.md) — colours, typography, naming, USXD frontmatter, ASCII vs teletext posture.
 
 ---
 

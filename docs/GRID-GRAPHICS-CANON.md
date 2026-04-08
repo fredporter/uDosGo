@@ -148,8 +148,10 @@ Theme families (examples: **thinui-c64**, **thinui-teletext**, **thinui-nes-soni
 ## See also
 
 - [DISPLAY_STACK.md](DISPLAY_STACK.md) — display / grid / teletext doc router  
+- [specs/README.md](specs/README.md) — specifications hub (tables of all engine + schema links)  
+- [style-guide.md](style-guide.md) — authoring, tokens, USXD frontmatter conventions  
 - [ARCHITECTURE.md](ARCHITECTURE.md) — system boundaries  
-- [README.md](README.md) — doc index  
+- [README.md](README.md) — full doc tree index  
 - [DATA-MODEL.md](DATA-MODEL.md) — disk and schema layout  
 - [usxd_schema.md](usxd_schema.md) — USXD YAML schema (human spec)  
 - `packages/schemas/usxd-surface.schema.json` — JSON Schema subset `usxd/0.1`  

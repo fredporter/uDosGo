@@ -83,14 +83,29 @@ uDOS-v3/
     scripts/
       init-storage.sh          # mkdir -p /udos-data/...
   docs/
+    README.md                 # doc tree index (start here)
+    QUICKSTART.md
     SCOPE-v3.0.1.md
     ARCHITECTURE.md
-    DEMO.md
     DATA-MODEL.md
+    DEMO.md
     WP-BRIDGE.md
     MILESTONES.md
+    BACKLOG.md
     ROADMAP.md
     FILE-TREE.md
+    style-guide.md            # canonical style + USXD authoring
+    GRID-GRAPHICS-CANON.md
+    DISPLAY_STACK.md
+    usxd_schema.md
+    view_engine.md
+    RENDER_PIPELINE.md
+    grid_engine.md
+    spatial_map_spec.md
+    teletext_engine.md
+    specs/
+      README.md               # specifications hub
+    u_dos_v_3_style_guide.md  # legacy redirect → style-guide.md
 ```
 
 ## Scaffold status (this planning pack)

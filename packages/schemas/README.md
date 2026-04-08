@@ -2,6 +2,8 @@
 
 Canonical JSON Schema drafts for v3.0.1. Consume from Host, Hivemind, ThinUI, and tooling; evolve with `schemaVersion` on each document.
 
+**Documentation:** [../docs/specs/README.md](../docs/specs/README.md) (spec hub), [../docs/usxd_schema.md](../docs/usxd_schema.md), [../docs/style-guide.md](../docs/style-guide.md).
+
 | File | Purpose |
 |------|---------|
 | `usxd-surface.schema.json` | **USXD** portable surface subset (`schemaVersion: usxd/0.1`); see `docs/usxd_schema.md`, `docs/DISPLAY_STACK.md` |

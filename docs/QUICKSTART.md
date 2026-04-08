@@ -90,3 +90,7 @@ npm run storage:init
 - Port conflict on `5173` or `8787`: stop the conflicting process.
 - WordPress unreachable: ensure Docker is running, then `npm run wp:logs`.
 - Bootstrap failure: wait for `http://127.0.0.1:8080`, then rerun `npm run demo:wp-bootstrap`.
+
+## Documentation
+
+After setup, use **[README.md](README.md)** for the full doc tree (specifications hub, style guide, architecture, demo).

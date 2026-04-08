@@ -1,28 +1,81 @@
-# uDOS v3.0.1 — planning pack (index)
+# uDOS v3 — documentation
 
-**Scope:** this folder documents the **uDOS-v3 monorepo** demo. **UniversalSurfaceXD** (v2 UX spine, interchange, browser-mockup) is the sibling design/interchange repo; pair it when evolving surface documents or shared JSON contracts.
+**Monorepo:** local-first demo (Host, Hivemind, ThinUI, optional WordPress).  
+**Sibling design repo:** **UniversalSurfaceXD** (interchange, browser-mockup) — pair it for portable surface JSON and Figma workflows.
 
-Public-facing planning cut for the **local-first demo**. Read in this order:
+This folder is the **authoritative doc tree** for v3. **Naming:** prefer **`kebab-case.md`** for new files ([style-guide.md](style-guide.md)).
 
-1. [QUICKSTART.md](QUICKSTART.md) — first-time setup and install/run path  
-2. [SCOPE-v3.0.1.md](SCOPE-v3.0.1.md) — what ships vs deferred  
-3. [ARCHITECTURE.md](ARCHITECTURE.md) — boundaries and flows  
-4. [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md) — **locked** 80×30 viewport, 16×24 tiles, teletext bridge, UniversalSurfaceXD pairing  
-5. [DISPLAY_STACK.md](DISPLAY_STACK.md) — **index** for grid / view / teletext / USXD / render pipeline specs  
-6. [DATA-MODEL.md](DATA-MODEL.md) — disk layout + schemas  
-7. [WP-BRIDGE.md](WP-BRIDGE.md) — WordPress + Empire plugin  
-8. [DEMO.md](DEMO.md) — gold path + 9-step definition of done  
-9. [MILESTONES.md](MILESTONES.md) — milestone checklists  
-10. [BACKLOG.md](BACKLOG.md) — what shipped vs deferred (v3.0.1 closed)  
-11. [FILE-TREE.md](FILE-TREE.md) — exact monorepo tree  
-12. [ROADMAP.md](ROADMAP.md) — after v3.0.1  
+---
 
-### Display / USXD specs (same canon)
+## 1. Start here
 
-- [usxd_schema.md](usxd_schema.md) · [view_engine.md](view_engine.md) · [RENDER_PIPELINE.md](RENDER_PIPELINE.md)  
-- [grid_engine.md](grid_engine.md) · [spatial_map_spec.md](spatial_map_spec.md) · [teletext_engine.md](teletext_engine.md)  
-- [u_dos_v_3_style_guide.md](u_dos_v_3_style_guide.md)  
-- Schema: `packages/schemas/usxd-surface.schema.json` · Example: `examples/usxd-surface-canonical.example.json` · Validate: `npm run validate:usxd` (also runs at start of `npm run build`)  
-- ThinUI: footer shows canon parity; **Teletext lab** at `#/lab/teletext`  
+| Doc | Purpose |
+| --- | --- |
+| [QUICKSTART.md](QUICKSTART.md) | Install, launch scripts, first run |
+| [SCOPE-v3.0.1.md](SCOPE-v3.0.1.md) | What ships vs deferred (locked) |
+| [../README.md](../README.md) | Repo overview + planning table |
 
-Product overview and repo entry: [../README.md](../README.md).
+---
+
+## 2. System design
+
+| Doc | Purpose |
+| --- | --- |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Module boundaries, data flows, API sketch |
+| [DATA-MODEL.md](DATA-MODEL.md) | Vault/spool/events, JSON schemas, truth model |
+| [WP-BRIDGE.md](WP-BRIDGE.md) | Empire ↔ WordPress plugin contract |
+| [FILE-TREE.md](FILE-TREE.md) | Target monorepo layout + scaffold status |
+
+---
+
+## 3. Specifications (display / USXD / render)
+
+**Hub:** [specs/README.md](specs/README.md) — grouped links to all engine specs and schema artifacts.
+
+**Canon (locked):** [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md) — 80×30, 16×24, teletext bridge, surface kinds, UniversalSurfaceXD role.
+
+**Router:** [DISPLAY_STACK.md](DISPLAY_STACK.md) — three-layer scale model + recommended read order.
+
+| Topic | Doc |
+| --- | --- |
+| USXD YAML/JSON shape | [usxd_schema.md](usxd_schema.md) |
+| View × render matrix | [view_engine.md](view_engine.md) |
+| End-to-end pipeline | [RENDER_PIPELINE.md](RENDER_PIPELINE.md) |
+| Spatial layout engine | [grid_engine.md](grid_engine.md) |
+| Maps / regions / markers | [spatial_map_spec.md](spatial_map_spec.md) |
+| Teletext raster / mosaic | [teletext_engine.md](teletext_engine.md) |
+
+**Validation:** `npm run validate:usxd` · **ThinUI:** footer parity strip · **Lab:** `#/lab/teletext`.
+
+---
+
+## 4. Style and authoring
+
+| Doc | Purpose |
+| --- | --- |
+| [style-guide.md](style-guide.md) | Colours, typography, naming, USXD frontmatter, ASCII vs teletext, OK Assist |
+
+Legacy filename: [u_dos_v_3_style_guide.md](u_dos_v_3_style_guide.md) redirects here.
+
+---
+
+## 5. Delivery and planning
+
+| Doc | Purpose |
+| --- | --- |
+| [DEMO.md](DEMO.md) | Gold path, operator steps, definition of done |
+| [MILESTONES.md](MILESTONES.md) | Build-order checklists |
+| [BACKLOG.md](BACKLOG.md) | v3.0.1 closure + active backlog |
+| [ROADMAP.md](ROADMAP.md) | Post-demo themes (reliability, display stack, split repos) |
+
+---
+
+## 6. Schemas in repo
+
+| Path | Purpose |
+| --- | --- |
+| `packages/schemas/` | `usxd-surface`, `feed`, `task`, `event`, `contact`, `user-link`, `provider-policy` |
+| `packages/shared/` | `grid-canonical.ts` — viewport/tile/mosaic constants |
+| `examples/usxd-surface-canonical.example.json` | Canonical USXD sample |
+
+See [packages/schemas/README.md](../packages/schemas/README.md).

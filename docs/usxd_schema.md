@@ -1,6 +1,6 @@
 # USXD Schema — uDOS v3 (confirmed)
 
-**Confirmed:** 2026-04-09 · **Index:** [DISPLAY_STACK.md](DISPLAY_STACK.md) · **Canon:** [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md)  
+**Confirmed:** 2026-04-09 · **Specs hub:** [specs/README.md](specs/README.md) · **Index:** [DISPLAY_STACK.md](DISPLAY_STACK.md) · **Canon:** [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md) · **Style:** [style-guide.md](style-guide.md)  
 **JSON Schema:** `packages/schemas/usxd-surface.schema.json` (`schemaVersion`: **`usxd/0.1`**)
 
 ---
