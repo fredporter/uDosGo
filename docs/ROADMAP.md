@@ -7,9 +7,9 @@
 - **Done (P0):** Job runner timeouts + vault write size cap + structured `tool.failed` / task `errorCode`; ThinUI SSE reconnect with backoff + status line; persistence decision (JSON for now) in [DATA-MODEL.md](DATA-MODEL.md).
 - **Done (P1):** Second demo scenario (inbox / email-thread intake) + [DEMO.md](DEMO.md) + `demo:seed:inbox`.
 - **Done (P2 prep):** [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) (checklist only; no repo split in-tree).
+- **Done (v3.0.3):** `validate:usxd` validates **all** USXD surface JSON files under `examples/` (not only the canonical file); use `npm run validate:usxd:verbose` to list skipped JSON.
 - ThinUI live updates: optional SSE filtering or WebSocket if a hard blocker appears.
 - SQLite (or single-DB) consolidation for tasks + events if file sprawl hurts (deferred past v3.0.2 P0).
-- Second demo scenario (import inbox, PDF note, email thread) reusing same schemas.
 
 ## Display stack (confirmed specs → code)
 
@@ -23,24 +23,24 @@
 
 **Done (implementation):**
 
-- `npm run validate:usxd` — AJV (draft 2020-12) validates `examples/usxd-surface-canonical.example.json` against `usxd-surface.schema.json`; runs at the start of `npm run build`.
+- `npm run validate:usxd` — AJV (draft 2020-12) validates every `usxd/0.1` surface JSON under `examples/` against `usxd-surface.schema.json`; runs at the start of `npm run build`.
 - ThinUI footer — shows `USXD_SCHEMA_VERSION`, canonical viewport, cell px, canvas px, link to **Teletext lab**.
 - **Teletext lab** — hash route `#/lab/teletext`; interactive 2×3 mosaic toggles (scaled view of one 16×24 logical cell).
 
 **Next:**
 
-- Validate additional surface JSON files (glob) when you add them.
+- Add more `examples/**/*.json` surface fixtures; `npm run validate:usxd` picks them up automatically.
 - Host: optional `surfaceRef` or embedded layout metadata beyond ThinUI.
 
-## Active tranche (resumed)
+## Active tranche
 
-Backlog execution is resumed and tracked in [BACKLOG.md](BACKLOG.md) under **"Active: v3.0.2 backlog"** with P0/P1/P2 priorities.
+Backlog: [BACKLOG.md](BACKLOG.md). **v3.0.2** tranche is closed; **v3.0.3** lists optional follow-ups (USXD glob validation shipped in M7).
 
-Execution order:
+Historical execution order for v3.0.2:
 
-1. reliability hardening (job runner + stream resilience + persistence decision),
-2. second scenario proof using existing contracts,
-3. only then consider repo split preparation.
+1. Reliability hardening (job runner + stream resilience + persistence decision).
+2. Second scenario (inbox thread) using existing contracts.
+3. Repo split preparation ([REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md)).
 
 ## Repo split (only after demo acceptance)
 

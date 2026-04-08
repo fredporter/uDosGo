@@ -41,7 +41,7 @@ Not the whole uDOS family. Not the full product vision. **One clean loop.**
 
 ## Schemas (first draft)
 
-JSON Schema drafts live in [`packages/schemas/`](packages/schemas/): **`usxd-surface`** (`usxd/0.1`), `feed`, `task`, `event`, `contact`, `user-link`, `provider-policy`. Example surface: [`examples/usxd-surface-canonical.example.json`](examples/usxd-surface-canonical.example.json).
+JSON Schema drafts live in [`packages/schemas/`](packages/schemas/): **`usxd-surface`** (`usxd/0.1`), `feed`, `task`, `event`, `contact`, `user-link`, `provider-policy`. Example surfaces: [`examples/usxd-surface-canonical.example.json`](examples/usxd-surface-canonical.example.json), [`examples/usxd-surface-minimal.example.json`](examples/usxd-surface-minimal.example.json) (`npm run validate:usxd` checks all USXD surfaces under `examples/`).
 
 ## Relation to uDOS-family
 
@@ -91,7 +91,8 @@ npm run thinui:dev     # ThinUI only
 npm run host:start     # Host only (run `npm run build` first)
 npm run demo:seed      # POST gold-path input to Host (needs Host running); --dry-run supported
 npm run demo:seed:inbox   # POST inbox-thread sample → `thread-{id}.md` vault stem
-npm run build          # sdk + hivemind + host + thinui
+npm run build          # sdk + hivemind + host + thinui (starts with validate:usxd)
+npm run validate:usxd:verbose  # USXD validation + log skipped JSON under examples/
 ```
 
 WordPress (Docker, optional): persistent tree matches Host at `./.udos-data/wordpress`.

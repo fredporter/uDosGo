@@ -8,6 +8,8 @@
 
 **v3.0.2 — P1 demo uplift + P2 split prep (M6) — complete (2026-04-09).** Second intake scenario + [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md).
 
+**v3.0.3 — M7 (USXD multi-file validation) — complete (2026-04-09).** `validate:usxd` globs `examples/`; see [BACKLOG.md](BACKLOG.md).
+
 ---
 
 ## Overview
@@ -20,6 +22,7 @@
 | M4 | Demo polish | Seed data, docs, screenshot/video-ready state | Done |
 | M5 | v3.0.2 P0 | Job runner limits + structured failures; SSE resilience; persistence decision | Done |
 | M6 | v3.0.2 P1–P2 | Second demo scenario (inbox thread); DEMO + seed scripts; repo split prep doc | Done |
+| M7 | v3.0.3 hygiene | USXD AJV validates every surface JSON under `examples/`; minimal second fixture | Done |
 
 ---
 
@@ -119,3 +122,13 @@ All nine **checked** → **v3.0.1 complete**.
 - [x] [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) for future `uDOS-host` / `uDOS-thinui` / hivemind extraction.
 
 **Exit:** Operator can run either scenario from ThinUI or CLI seed; vault files are distinguishable (`gold-*` vs `thread-*`); split checklist exists for post-acceptance work.
+
+---
+
+## M7 — v3.0.3 USXD validation (backlog hygiene)
+
+- [x] `scripts/validate-usxd-surface.mjs` discovers `examples/**/*.json` (skips `package.json`); validates documents with `schemaVersion: usxd/0.1` and `type: surface`.
+- [x] `npm run validate:usxd:verbose` logs non-surface JSON skipped under `examples/`.
+- [x] Second fixture: `examples/usxd-surface-minimal.example.json` (schema floor).
+
+**Exit:** `npm run build` still starts with `validate:usxd`; adding new surface examples under `examples/` is caught in CI without editing the script.

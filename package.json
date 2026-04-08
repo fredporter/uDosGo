@@ -29,7 +29,8 @@
     "demo:seed:inbox:dry": "node demo/scripts/seed.mjs --dry-run --input sample-inputs/inbox-thread.txt",
     "demo:wp-bootstrap": "node demo/scripts/wp-bootstrap.mjs",
     "demo:wp-link": "node demo/scripts/wp-link-demo.mjs",
-    "validate:usxd": "node scripts/validate-usxd-surface.mjs"
+    "validate:usxd": "node scripts/validate-usxd-surface.mjs",
+    "validate:usxd:verbose": "node scripts/validate-usxd-surface.mjs --verbose"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

@@ -17,31 +17,37 @@ Shipped capabilities (summary):
 | Ops | `npm run launch`, `doctor`, `storage:init`, double-click launchers |
 | Demo steps 8–9 | `demo:wp-bootstrap`, `demo:wp-link`, `demo/.wp-demo.env` (gitignored) |
 
+## Closed: v3.0.2 (reliability + second scenario + split prep)
+
+**Status:** **Complete** per [MILESTONES.md](MILESTONES.md) M5–M6 (through 2026-04-09).
+
+| Track | Outcome |
+|-------|---------|
+| P0 | Tool timeouts, vault byte cap, structured `tool.failed`, SSE reconnect, JSON persistence decision |
+| P1 | Inbox / email-thread scenario, `thread-*.md` vault stem, `demo:seed:inbox`, [DEMO.md](DEMO.md) scenario B |
+| P2 prep | [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) extraction checklist (no in-repo split) |
+
 ## Optional (non-blocking)
 
 - Marketing assets: PNG/video from [DEMO.md](DEMO.md) screenshot checklist.
 
 **Steps 8–9 prep:** `npm run demo:wp-bootstrap` and `npm run demo:wp-link` (see [DEMO.md](DEMO.md) § Steps 8–9).
 
-## Active: v3.0.2 backlog (resumed 2026-04-08)
+## Active: v3.0.3 candidates
 
-Priority order follows [ROADMAP.md](ROADMAP.md) and keeps scope limited to hardening the existing loop before any repo split.
+Small follow-ups after v3.0.2 closure; does **not** include depth roadmap (see below).
 
-### P0 — reliability hardening (current)
+- [x] **USXD validation:** `npm run validate:usxd` walks `examples/**/*.json` and validates every document with `schemaVersion: usxd/0.1` + `type: surface` (see [MILESTONES.md](MILESTONES.md) M7).
+- [ ] **SSE:** optional event filtering or WebSocket only if a concrete ThinUI blocker appears ([ROADMAP.md](ROADMAP.md)).
+- [ ] **Persistence:** SQLite / single-DB consolidation if JSON tail latency or sprawl hurts ([DATA-MODEL.md](DATA-MODEL.md) decision can be revisited).
+- [ ] **Host:** optional `surfaceRef` or embedded layout metadata for USXD beyond ThinUI ([ROADMAP.md](ROADMAP.md)).
 
-- [x] Job runner hardening: timeout policy, resource caps, structured failure codes (`UDOS_TOOL_TIMEOUT_MS`, `UDOS_VAULT_NOTE_MAX_BYTES`; task `errorCode` + `tool.failed` payload).
-- [x] ThinUI live-update resilience: reconnect UX and stream status; keep SSE as default unless hard blocker appears.
-- [x] Task/event persistence review: JSON files retained for v3.0.2; SQLite deferred (recorded in [DATA-MODEL.md](DATA-MODEL.md)).
+## Beyond v3.0.x — explicitly deferred
 
-### P1 — demo quality uplift
+Not scheduled in this backlog; tracked for positioning only:
 
-- [x] Second demo scenario: **email-thread / inbox intake** — Scout detects `From:`+`Subject:`, reply headers, or quoted lines; `vaultStem` `thread`, tasks + tools unchanged; sample `demo/sample-inputs/inbox-thread.txt`; `npm run demo:seed:inbox`.
-- [x] Operator notes for scenario B in [DEMO.md](DEMO.md).
-
-### P2 — deferred until acceptance gates
-
-- [x] Repo split prep: checklist and boundaries in [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md) (extract when you accept the tranche; no structural split in-repo).
-- [ ] Depth features remain deferred (sync engine, beacon networking, registry/marketplace, mobile, full module parity).
+- Sync engine, beacon networking, MCP registry / marketplace, mobile clients, App Store, full family module parity.
+- WordPress multisite / enterprise CRM / full bi-directional Empire sync.
 
 ## Tracking rule
 

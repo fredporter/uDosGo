@@ -45,7 +45,7 @@ This folder is the **authoritative doc tree** for v3. **Naming:** prefer **`keba
 | Maps / regions / markers | [spatial_map_spec.md](spatial_map_spec.md) |
 | Teletext raster / mosaic | [teletext_engine.md](teletext_engine.md) |
 
-**Validation:** `npm run validate:usxd` · **ThinUI:** footer parity strip · **Lab:** `#/lab/teletext`.
+**Validation:** `npm run validate:usxd` (all USXD surfaces under `examples/`; `--verbose` via `validate:usxd:verbose`) · **ThinUI:** footer parity strip · **Lab:** `#/lab/teletext`.
 
 ---
 
@@ -77,6 +77,6 @@ Legacy filename: [u_dos_v_3_style_guide.md](u_dos_v_3_style_guide.md) redirects 
 | --- | --- |
 | `packages/schemas/` | `usxd-surface`, `feed`, `task`, `event`, `contact`, `user-link`, `provider-policy` |
 | `packages/shared/` | `grid-canonical.ts` — viewport/tile/mosaic constants |
-| `examples/usxd-surface-canonical.example.json` | Canonical USXD sample |
+| `examples/usxd-surface-*.example.json` | USXD sample surfaces (AJV via `validate:usxd`) |
 
 See [packages/schemas/README.md](../packages/schemas/README.md).

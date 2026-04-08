@@ -22,7 +22,8 @@
 | [../usxd_schema.md](../usxd_schema.md) | Human spec: `usxd/0.1`, `kind`, `grid.tile_px`, regions, validation |
 | `packages/schemas/usxd-surface.schema.json` | JSON Schema (subset) |
 | `examples/usxd-surface-canonical.example.json` | Canonical example |
-| `npm run validate:usxd` | AJV check (also first step of `npm run build`) |
+| `examples/usxd-surface-minimal.example.json` | Minimal valid surface (schema floor) |
+| `npm run validate:usxd` | AJV check for **all** `usxd/0.1` surfaces under `examples/` (first step of `npm run build`); `validate:usxd:verbose` lists skips |
 
 **Sibling repo:** UniversalSurfaceXD — `docs/decisions/UniversalSurfaceXD_v2-cannon.md`, `usxd_udos_integrated_template.md`.
 

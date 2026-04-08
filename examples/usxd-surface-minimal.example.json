@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "usxd/0.1",
+  "id": "example-minimal-surface",
+  "type": "surface",
+  "title": "Minimal valid surface (schema floor only)",
+  "kind": "panel"
+}
