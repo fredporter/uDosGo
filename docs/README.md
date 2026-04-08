@@ -22,6 +22,7 @@ Public-facing planning cut for the **local-first demo**. Read in this order:
 - [usxd_schema.md](usxd_schema.md) · [view_engine.md](view_engine.md) · [RENDER_PIPELINE.md](RENDER_PIPELINE.md)  
 - [grid_engine.md](grid_engine.md) · [spatial_map_spec.md](spatial_map_spec.md) · [teletext_engine.md](teletext_engine.md)  
 - [u_dos_v_3_style_guide.md](u_dos_v_3_style_guide.md)  
-- Schema: `packages/schemas/usxd-surface.schema.json` · Example: `examples/usxd-surface-canonical.example.json`  
+- Schema: `packages/schemas/usxd-surface.schema.json` · Example: `examples/usxd-surface-canonical.example.json` · Validate: `npm run validate:usxd` (also runs at start of `npm run build`)  
+- ThinUI: footer shows canon parity; **Teletext lab** at `#/lab/teletext`  
 
 Product overview and repo entry: [../README.md](../README.md).

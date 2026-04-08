@@ -19,11 +19,16 @@
 - `packages/schemas/usxd-surface.schema.json` — JSON Schema subset for `usxd/0.1` surface documents.
 - `examples/usxd-surface-canonical.example.json` — canonical 80×30 teletext example.
 
-**Next (implementation):**
+**Done (implementation):**
 
-- CI or `npm` script: validate example + future surfaces with AJV (or equivalent) against `usxd-surface.schema.json`.
-- ThinUI / Host: optional `surfaceRef` or embedded layout metadata on operator views using CSS vars + shared constants.
-- Teletext preview component (mosaic 2×3) as a dev-only or labs route when ready.
+- `npm run validate:usxd` — AJV (draft 2020-12) validates `examples/usxd-surface-canonical.example.json` against `usxd-surface.schema.json`; runs at the start of `npm run build`.
+- ThinUI footer — shows `USXD_SCHEMA_VERSION`, canonical viewport, cell px, canvas px, link to **Teletext lab**.
+- **Teletext lab** — hash route `#/lab/teletext`; interactive 2×3 mosaic toggles (scaled view of one 16×24 logical cell).
+
+**Next:**
+
+- Validate additional surface JSON files (glob) when you add them.
+- Host: optional `surfaceRef` or embedded layout metadata beyond ThinUI.
 
 ## Active tranche (resumed)
 

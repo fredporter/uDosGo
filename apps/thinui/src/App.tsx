@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+  CANONICAL_TILE_PX_H,
+  CANONICAL_TILE_PX_W,
+  CANONICAL_VIEWPORT_COLS,
+  CANONICAL_VIEWPORT_ROWS,
+  USXD_SCHEMA_VERSION,
+  canonicalCanvasPx,
+} from "@udos/shared";
+import {
   createHostClient,
   type EventEntry,
   type FeedItem,
@@ -196,6 +204,8 @@ export function App() {
       : live === "down"
         ? "SSE disconnected — full refresh every 12s"
         : "connecting…";
+
+  const canvas = canonicalCanvasPx();
 
   return (
     <div className="shell">
@@ -397,6 +407,26 @@ export function App() {
           <pre className="pre pre--compact">{health}</pre>
         </section>
       </div>
+
+      <footer className="parity-footer" aria-label="Display canon parity">
+        <span>
+          <code>{USXD_SCHEMA_VERSION}</code>
+        </span>
+        <span className="parity-footer__sep">·</span>
+        <span>
+          viewport {CANONICAL_VIEWPORT_COLS}×{CANONICAL_VIEWPORT_ROWS}
+        </span>
+        <span className="parity-footer__sep">·</span>
+        <span>
+          cell {CANONICAL_TILE_PX_W}×{CANONICAL_TILE_PX_H}px
+        </span>
+        <span className="parity-footer__sep">·</span>
+        <span>
+          canvas {canvas.width}×{canvas.height}px
+        </span>
+        <span className="parity-footer__sep">·</span>
+        <a href="#/lab/teletext">Teletext lab</a>
+      </footer>
     </div>
   );
 }

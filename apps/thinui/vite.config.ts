@@ -10,6 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@udos/sdk": path.join(root, "../../packages/sdk/src/index.ts"),
+      "@udos/shared": path.join(root, "../../packages/shared/src/index.ts"),
     },
   },
   server: {

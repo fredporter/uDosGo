@@ -307,3 +307,112 @@ button:hover {
 .vault-list li {
   margin-bottom: 4px;
 }
+
+.parity-footer {
+  margin-top: 28px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #222838;
+  background: #0b0e14;
+  font-size: 0.78rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #8b93a8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.parity-footer a {
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+.parity-footer a:hover {
+  text-decoration: underline;
+}
+
+.parity-footer__sep {
+  opacity: 0.45;
+  user-select: none;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #2a3550;
+  background: #121826;
+  color: #4da3ff;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+.btn-link:hover {
+  border-color: #4da3ff;
+}
+
+.teletext-lab__demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.teletext-lab__block {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: #1b2436;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.teletext-lab__block--on {
+  background: #4da3ff;
+}
+
+.teletext-lab__block-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8b93a8;
+  opacity: 0.9;
+}
+
+.teletext-lab__block--on .teletext-lab__block-label {
+  color: #0a0f1c;
+}
+
+.teletext-lab__side {
+  flex: 1;
+  min-width: 200px;
+}
+
+.teletext-lab__presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.teletext-lab__presets button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #2a3550;
+  background: #121826;
+  color: #e6edf3;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.teletext-lab__presets button:hover {
+  border-color: #4da3ff;
+}
+
+.teletext-lab__doc {
+  margin-top: 32px;
+}

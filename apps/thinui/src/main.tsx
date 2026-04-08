@@ -6,7 +6,7 @@ import {
   CANONICAL_VIEWPORT_COLS,
   CANONICAL_VIEWPORT_ROWS,
 } from "@udos/shared";
-import { App } from "./App";
+import { Shell } from "./Shell";
 import "./styles.css";
 
 const rootEl = document.documentElement;
@@ -28,6 +28,6 @@ if (!el) {
 
 createRoot(el).render(
   <StrictMode>
-    <App />
+    <Shell />
   </StrictMode>
 );
