@@ -3,7 +3,7 @@
 **Status:** locked for uDOS v3  
 **Updated:** 2026-04-09  
 **Spec index:** [DISPLAY_STACK.md](DISPLAY_STACK.md)  
-**Pair spec:** [UniversalSurfaceXD v2 cannon](../../UniversalSurfaceXD/docs/decisions/UniversalSurfaceXD_v2-cannon.md) (portable surface declaration; filename uses **cannon**)
+**Pair spec:** [UniversalSurfaceXD v2 cannon](../../UniversalSurfaceXD/docs/decisions/UniversalSurfaceXD_v2-cannon.md) · [web (GitHub)](https://github.com/fredporter/UniversalSurfaceXD/blob/main/docs/decisions/UniversalSurfaceXD_v2-cannon.md) (portable surface declaration; filename uses **cannon**)
 
 This document is the **implementation-facing** copy of the grid–graphics contract for the **uDOS-v3 monorepo** (Host, Hivemind, ThinUI, schemas). **UniversalSurfaceXD** carries the cross-repo, transportable surface schema narrative; both stay aligned.
 

@@ -1,7 +1,7 @@
 # uDOS v3 — documentation
 
 **Monorepo:** local-first demo (Host, Hivemind, ThinUI, optional WordPress).  
-**Sibling design repo:** **UniversalSurfaceXD** (interchange, browser-mockup) — pair it for portable surface JSON and Figma workflows.
+**Sibling design repo:** **[UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD)** (interchange, browser-mockup, MIT) — pair it for portable surface JSON and Figma workflows. Optional clone: `../UniversalSurfaceXD` next to this repo’s parent folder (see [`uDOS-v3.code-workspace`](../../uDOS-v3.code-workspace)).
 
 This folder is the **authoritative doc tree** for v3. **Naming:** prefer **`kebab-case.md`** for new files ([style-guide.md](style-guide.md)).
 

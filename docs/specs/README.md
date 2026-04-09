@@ -25,7 +25,7 @@
 | `examples/usxd-surface-minimal.example.json` | Minimal valid surface (schema floor) |
 | `npm run validate:usxd` | AJV check for **all** `usxd/0.1` surfaces under `examples/` (first step of `npm run build`); `validate:usxd:verbose` lists skips |
 
-**Sibling repo:** UniversalSurfaceXD — `docs/decisions/UniversalSurfaceXD_v2-cannon.md`, `usxd_udos_integrated_template.md`.
+**Sibling repo:** **[UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD)** — [cannon](https://github.com/fredporter/UniversalSurfaceXD/blob/main/docs/decisions/UniversalSurfaceXD_v2-cannon.md), [integrated template](https://github.com/fredporter/UniversalSurfaceXD/blob/main/docs/decisions/usxd_udos_integrated_template.md).
 
 ---
 

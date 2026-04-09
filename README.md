@@ -49,9 +49,9 @@ The broader family workspace may keep historical modules (`uDOS-host`, `uDOS-thi
 
 See also: [`../uDOS-dev/docs/v3-system-brief.md`](../uDOS-dev/docs/v3-system-brief.md) (bootstrap brief).
 
-## Companion: UniversalSurfaceXD (v2 UX spine)
+## Companion: UniversalSurfaceXD (design + interchange)
 
-Surface vocabulary, interchange JSON, Figma handoff, and the browser-mockup UX designer live in **`UniversalSurfaceXD`** (sibling of this directory’s parent: `../../UniversalSurfaceXD`). Treat that repo as **UniversalSurfaceXD v2** (UX + interchange); this monorepo is the **runnable uDOS-v3 integration**. Keep `packages/schemas` and ThinUI copy aligned with `UniversalSurfaceXD/interchange/` when contracts change. Integrated Cursor workspace: [`../uDOS-v3.code-workspace`](../uDOS-v3.code-workspace) at the `uDOS-family` root.
+Portable surface vocabulary, interchange JSON, Figma handoff, and the browser **UX designer** live in the open-source repo **[github.com/fredporter/UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD)** (MIT). Optional local checkout: sibling **`../UniversalSurfaceXD`** next to the `uDOS-family` folder (same layout as [`uDOS-v3.code-workspace`](../uDOS-v3.code-workspace)). This monorepo is the **runnable uDOS v3 integration**; UniversalSurfaceXD is the **composer + lab + interchange** side. Keep `packages/schemas` and ThinUI copy aligned with `UniversalSurfaceXD/interchange/` when contracts change.
 
 ## Quick start
 
