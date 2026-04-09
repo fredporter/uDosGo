@@ -1,6 +1,6 @@
 # uDOS v3.0.1 — Local-first demo (planning cut)
 
-**Name:** **uDos** expands to **Universal Device Operating Surface**. (Plural **UDOs** = User Defined Objects when that sense is meant.)
+**Name:** **uDos** expands to **Universal Device Operating Surface**. The capital **D** is intentional (**uDos**, not `udos` or `uDOS` in new copy—see [docs/dev-process-v4.md](docs/dev-process-v4.md)).
 
 **Repo meta / dev standard:** root `package.json` **version 4.x** tracks the **family dev process** (see [docs/dev-process-v4.md](docs/dev-process-v4.md)). **v3.0.1** below is the **planning / demo release** name for this integration monorepo — not the same axis as UniversalSurfaceXD or uDOS-dev versioning.
 

@@ -1,6 +1,6 @@
 # Agent notes (uDOS-v3)
 
-**uDos** = **Universal Device Operating Surface** (canonical expansion from v3+). **UDOs** = User Defined Objects when that noun is intended. From **dev standard v4**, prefer **uDos** in new/edited copy; leave historical **uDOS** until the file is revised ([dev-process-v4.md](docs/dev-process-v4.md)).
+**uDos** = **Universal Device Operating Surface** (canonical expansion from v3+). Capital **D** is intentional—do not “fix” to `udos` / `uDOS` in new work. From **dev standard v4**, prefer **uDos** in new/edited copy; leave historical **uDOS** until the file is revised ([dev-process-v4.md](docs/dev-process-v4.md)). Do not introduce a separate “UDO” / “UDOs” acronym in this family’s docs (reserved elsewhere in the market).
 
 ## Scope
 

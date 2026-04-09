@@ -7,7 +7,7 @@
 
 ## uDos — expansion (canonical)
 
-From v3 onward, the stylized name **uDos** expands to **Universal Device Operating Surface** (not “operating system”). **UDOs** (plural caps) is reserved in prose for **User Defined Objects** when that meaning is intended.
+From v3 onward, the stylized name **uDos** expands to **Universal Device Operating Surface** (not “operating system”). From **dev standard v4** onward, the mid-word capital **D** is intentional (**u** + **Dos** as in Device + Operating Surface)—use this spelling in new and edited prose; see [dev-process-v4.md](dev-process-v4.md). This project does **not** use a separate “UDO” / “UDOs” product acronym here; that wording belongs to other products and should not appear in family docs.
 
 ---
 

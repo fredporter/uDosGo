@@ -10,7 +10,7 @@
 
 ### Naming in prose (v4 onwards)
 
-Prefer **uDos** (see [repo-identity-and-rename-v4.md](repo-identity-and-rename-v4.md) § expansion) in **new and edited** copy. Older **uDOS** spellings in existing files are fine until that file is revised — **no** whole-repo grep/replace campaign.
+Prefer **uDos** (see [repo-identity-and-rename-v4.md](repo-identity-and-rename-v4.md) § expansion) in **new and edited** copy. The capital **D** is intentional—do not normalize to all-lowercase `udos`. Older **uDOS** spellings in existing files are fine until that file is revised — **no** whole-repo grep/replace campaign. Do **not** introduce “UDO” / “UDOs” as a family term (those strings name unrelated products elsewhere).
 
 ## Locked layout
 
