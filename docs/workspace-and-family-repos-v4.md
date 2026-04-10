@@ -2,6 +2,8 @@
 
 **Purpose:** map the **uDOS-family / uDOS-v3.code-workspace** roots to roles, and when to **split** the monorepo back into sibling repos.
 
+**Canonical local spine (2026+):** clone this monorepo as **`~/Code/uDosGo/`**; governance, public docs, and `v2-reference` live under **`~/Code/uDosConnect/`** — see **[uDosConnect: `docs/family-workspace-layout.md`](https://github.com/fredporter/uDosConnect/blob/main/docs/family-workspace-layout.md)**.
+
 ## What the v3.0.1 demo needs inside `uDOS-v3`
 
 | Area | Needed for demo? |
