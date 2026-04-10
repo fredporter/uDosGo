@@ -1,0 +1,30 @@
+{
+  "name": "Macdown v4 — app + Chatdown + USXD",
+  "folders": [
+    { "name": "uDos-Go", "path": ".." },
+    { "name": "Macdown (Syncdown-app)", "path": "../../Syncdown-app" },
+    { "name": "Chatdown", "path": "../../Chatdown" },
+    { "name": "UniversalSurfaceXD", "path": "../../UniversalSurfaceXD" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.local": true,
+      "**/.compost": true,
+      "**/node_modules": true
+    },
+    "editor.tabSize": 2,
+    "files.associations": {
+      "*.surface.yaml": "yaml",
+      "TASKS.md": "markdown"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "github.copilot",
+      "github.copilot-chat",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "swiftlang.swift-vscode"
+    ]
+  }
+}

@@ -8,6 +8,8 @@
 
 This repository is the **v3 monorepo target**. Implementation may start empty; the **planning pack** lives under [`docs/`](docs/) and [`packages/schemas/`](packages/schemas/).
 
+**Family v4 — multi-repo Cursor workspaces:** [`workspaces/README.md`](workspaces/README.md) (`uDOS-v4.code-workspace`, `Linkdown-v4.code-workspace`, `Macdown-v4.code-workspace`).
+
 ## One sentence
 
 A local-first orchestration demo where ThinUI submits and inspects work, Hivemind plans it, Host executes it, WordPress handles identity/privacy/restricted local pages, and all outputs persist to a mounted vault/workspace.

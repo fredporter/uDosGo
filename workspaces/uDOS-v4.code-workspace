@@ -1,0 +1,39 @@
+{
+  "name": "uDOS v4 — full ecosystem",
+  "folders": [
+    { "name": "uDos-Go", "path": ".." },
+    { "name": "Linkdown", "path": "../../Linkdown" },
+    { "name": "Linkdown-premium", "path": "../../Linkdown-premium" },
+    { "name": "Macdown (Syncdown-app)", "path": "../../Syncdown-app" },
+    { "name": "Chatdown", "path": "../../Chatdown" },
+    { "name": "UniversalSurfaceXD", "path": "../../UniversalSurfaceXD" },
+    { "name": "uDosConnect", "path": "../../uDosConnect" },
+    { "name": "SonicScrewdriver", "path": "../../SonicScrewdriver" },
+    { "name": "Ventoy (fork)", "path": "../../Ventoy" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.local": true,
+      "**/.compost": true,
+      "**/node_modules": true,
+      "**/__pycache__": true
+    },
+    "editor.tabSize": 2,
+    "files.associations": {
+      "TASKS.md": "markdown",
+      "*.surface.yaml": "yaml",
+      "*.mdc": "markdown"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "github.copilot",
+      "github.copilot-chat",
+      "esbenp.prettier-vscode",
+      "yzhang.markdown-all-in-one",
+      "bradlc.vscode-tailwindcss",
+      "golang.go",
+      "swiftlang.swift-vscode"
+    ]
+  }
+}
