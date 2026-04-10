@@ -19,3 +19,5 @@ Task Forge layout (family dev standard **v4**). **Family rounds index:** [`../uD
 ## Blocked
 
 ## Done
+
+- [x] [UDGO-WS] Single multi-root workspace: **`uDosGo.code-workspace`** only; removed `workspaces/*.code-workspace` and duplicate `~/Code/uDosGo.code-workspace` / `uDosFamily.code-workspace` #docs
