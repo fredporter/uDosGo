@@ -1,10 +1,7 @@
 {
   "name": "uDos v4 — uDosGo + family",
   "folders": [
-    { "name": "uDos-Go (this repo)", "path": "." },
-    { "name": "Linkdown", "path": "../Linkdown" },
-    { "name": "Linkdown-premium", "path": "../Linkdown-premium" },
-    { "name": "Macdown (Syncdown-app)", "path": "../Syncdown-app" },
+    { "name": "uDosGo (this repo)", "path": "." },
     { "name": "Chatdown", "path": "../Chatdown" },
     { "name": "UniversalSurfaceXD", "path": "../UniversalSurfaceXD" },
     { "name": "uDosConnect", "path": "../uDosConnect" },

@@ -1,8 +1,8 @@
 {
   "name": "Macdown v4 — app + Chatdown + USXD",
   "folders": [
-    { "name": "uDos-Go", "path": ".." },
-    { "name": "Macdown (Syncdown-app)", "path": "../../Syncdown-app" },
+    { "name": "uDosGo", "path": ".." },
+    { "name": "Macdown", "path": "../../Macdown" },
     { "name": "Chatdown", "path": "../../Chatdown" },
     { "name": "UniversalSurfaceXD", "path": "../../UniversalSurfaceXD" }
   ],

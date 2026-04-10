@@ -1,10 +1,7 @@
 {
-  "name": "uDOS v4 — full ecosystem",
+  "name": "uDos v4 — full ecosystem",
   "folders": [
-    { "name": "uDos-Go", "path": ".." },
-    { "name": "Linkdown", "path": "../../Linkdown" },
-    { "name": "Linkdown-premium", "path": "../../Linkdown-premium" },
-    { "name": "Macdown (Syncdown-app)", "path": "../../Syncdown-app" },
+    { "name": "uDosGo", "path": ".." },
     { "name": "Chatdown", "path": "../../Chatdown" },
     { "name": "UniversalSurfaceXD", "path": "../../UniversalSurfaceXD" },
     { "name": "uDosConnect", "path": "../../uDosConnect" },

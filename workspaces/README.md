@@ -1,6 +1,6 @@
-# uDOS v4 — focused workspaces (uDos-Go)
+# uDos v4 — focused workspaces (uDosGo)
 
-These files live in **`workspaces/`** so paths use **`../`** (uDos-Go repo root) and **`../../…`** (siblings under `~/Code/`).
+These files live in **`workspaces/`** so paths use **`../`** (uDosGo repo root) and **`../../…`** (siblings under `~/Code/`).
 
 **Default / full family:** prefer the repo-root **[`../uDosGo.code-workspace`](../uDosGo.code-workspace)** when you want the same roots with simpler relative paths (open from `~/Code/uDosGo/`).
 
@@ -14,7 +14,7 @@ These files live in **`workspaces/`** so paths use **`../`** (uDos-Go repo root)
 
 | Folder | Notes |
 | --- | --- |
-| `Linkdown`, `Linkdown-premium`, `Syncdown-app`, `Chatdown`, `UniversalSurfaceXD`, `uDosConnect`, `SonicScrewdriver`, `Ventoy` | Sibling clones |
+| `Linkdown`, `Linkdown-premium`, `Macdown`, `Chatdown`, `UniversalSurfaceXD`, `uDosConnect`, `SonicScrewdriver`, `Ventoy`, `uHomeNest` | Sibling clones |
 
 ## Scripts
 
