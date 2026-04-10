@@ -1,4 +1,4 @@
-# Docker — WordPress runtime (uDOS v3)
+# Docker — WordPress runtime (uDosGo)
 
 Local **WordPress + MySQL** for the v3 demo: persistent files under the monorepo **`.udos-data/`** tree (aligned with Host’s `wordpress` and sibling dirs).
 
@@ -14,7 +14,7 @@ Optional: copy `infra/docker/.env.example` to `infra/docker/.env` and adjust val
 
 ## Start / stop
 
-From the **repository root** (`uDOS-v3/`):
+From the **repository root** (`uDosGo/`):
 
 ```bash
 npm run wp:up      # detached
@@ -58,7 +58,7 @@ After the container first boot, complete the WordPress install wizard in the bro
 
 ## Host alignment
 
-The Node Host defaults to **`uDOS-v3/.udos-data`** (resolved from the Host entrypoint, not `process.cwd()`), so `wordpress/`, `vault/`, and Docker’s WordPress files all share the same tree. Override with `UDOS_DATA_ROOT` if needed.
+The Node Host defaults to **`<repo>/.udos-data`** (typically `uDosGo/.udos-data`, resolved from the Host entrypoint, not `process.cwd()`), so `wordpress/`, `vault/`, and Docker’s WordPress files all share the same tree. Override with `UDOS_DATA_ROOT` if needed.
 
 ## Troubleshooting
 

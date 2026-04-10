@@ -1,6 +1,6 @@
 # Repo split prep (v3.0.2+)
 
-This document records **boundaries and a checklist** for extracting `uDOS-v3` into sibling repos when you accept the demo tranche. It does **not** perform a split.
+This document records **boundaries and a checklist** for extracting **`uDosGo`** into sibling repos when you accept the demo tranche. It does **not** perform a split.
 
 ## Target repos (from [ROADMAP.md](ROADMAP.md))
 

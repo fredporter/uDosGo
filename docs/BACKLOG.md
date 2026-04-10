@@ -45,6 +45,17 @@ Shipped capabilities (summary):
 
 **Steps 8–9 prep:** `npm run demo:wp-bootstrap` and `npm run demo:wp-link` (see [DEMO.md](DEMO.md) § Steps 8–9).
 
+## Open: v4 family alignment (forward)
+
+**Product tranches (v3.0.x)** are closed through M8 — see [MILESTONES.md](MILESTONES.md). Forward work is **family v4 alignment**, not a new v3.0.x queue:
+
+| Track | Where | Status |
+| --- | --- | --- |
+| **Spec + schema alignment** | [`[UDGO-R02]`](../TASKS.md) **done** (2026-04-10); [docs/specs/README.md](specs/README.md) · [uDosDev `specs/v4/`](../../uDosConnect/uDosDev/docs/specs/v4/) | **Maintenance** — extend hub when uDosDev README gains entries |
+| **Rename / branding sweep** | [TASKS.md](../TASKS.md) **`[UDGO-T001]`**; [repo-identity-and-rename-v4.md](repo-identity-and-rename-v4.md) | Backlog (scheduled) |
+
+**Roadmap snapshot (actual vs still to do):** [ROADMAP.md § v4 journey](ROADMAP.md) — status table + **Active tranche** at bottom of that file.
+
 ## Beyond v3.0.x — explicitly deferred
 
 Not scheduled in this backlog; tracked for positioning only:

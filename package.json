@@ -1,8 +1,16 @@
 {
-  "name": "udos-v3",
+  "name": "udos-go",
   "version": "4.0.0",
   "private": true,
-  "description": "uDOS v3.0.1 local-first demo monorepo (dev process standard v4 — see docs/dev-process-v4.md)",
+  "description": "uDosGo — uDos v3.0.1 local-first demo monorepo (dev process standard v4 — see docs/dev-process-v4.md)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredporter/uDosGo.git"
+  },
+  "homepage": "https://github.com/fredporter/uDosGo#readme",
+  "bugs": {
+    "url": "https://github.com/fredporter/uDosGo/issues"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -31,7 +39,10 @@
     "demo:wp-bootstrap": "node demo/scripts/wp-bootstrap.mjs",
     "demo:wp-link": "node demo/scripts/wp-link-demo.mjs",
     "validate:usxd": "node scripts/validate-usxd-surface.mjs",
-    "validate:usxd:verbose": "node scripts/validate-usxd-surface.mjs --verbose"
+    "validate:usxd:verbose": "node scripts/validate-usxd-surface.mjs --verbose",
+    "validate:usxd:sibling": "node scripts/validate-usxd-sibling-lab.mjs",
+    "validate:usxd:parity": "npm run validate:usxd && npm run validate:usxd:sibling",
+    "doc:drift": "node scripts/check-doc-drift.mjs"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

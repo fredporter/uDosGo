@@ -4,11 +4,12 @@ Task Forge layout (family dev standard **v4**). **Family rounds index:** [`../uD
 
 ## Backlog
 
+## In Progress
+
 - [ ] [UDGO-T001] Execute GitHub branding sweep when schedule allows (rename follow-up) #infra
   ↳ Scope: `docs/repo-identity-and-rename-v4.md`, workspace + cross-repo links
   ↳ Outcome: clone URL and docs match chosen slug
-
-## In Progress
+  ↳ Next: reconcile remaining `uDOS` / old slug mentions in touched docs after this push; open PR or direct push per solo policy
 
 ## Blocked
 

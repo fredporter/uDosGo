@@ -2,7 +2,9 @@
 
 **Name:** **uDos** expands to **Universal Device Operating Surface**. The capital **D** is intentional (**uDos**, not `udos` or `uDOS` in new copy—see [docs/dev-process-v4.md](docs/dev-process-v4.md)).
 
-**Repo meta / dev standard:** root `package.json` **version 4.x** tracks the **family dev process** (see [docs/dev-process-v4.md](docs/dev-process-v4.md)). **v3.0.1** below is the **planning / demo release** name for this integration monorepo — not the same axis as UniversalSurfaceXD or uDOS-dev versioning.
+**GitHub:** [https://github.com/fredporter/uDosGo](https://github.com/fredporter/uDosGo) — clone locally as **`~/Code/uDosGo/`** (family convention).
+
+**Repo meta / dev standard:** root `package.json` **version 4.x** tracks the **family dev process** (see [docs/dev-process-v4.md](docs/dev-process-v4.md)). **v3.0.1** below is the **planning / demo release** name for this integration monorepo — not the same axis as UniversalSurfaceXD’s release line or **uDosDev** governance versioning.
 
 **v3.0.1** is the first public-facing planning release for a **single, runnable local loop**: ThinUI submits and inspects work, Hivemind plans and routes it, Host executes and persists it, WordPress provides local identity, privacy, and restricted pages, and everything lands on a **mounted vault/workspace**.
 
@@ -49,15 +51,15 @@ Not the whole uDOS family. Not the full product vision. **One clean loop.**
 
 JSON Schema drafts live in [`packages/schemas/`](packages/schemas/): **`usxd-surface`** (`usxd/0.1`), `feed`, `task`, `event`, `contact`, `user-link`, `provider-policy`. Example surfaces: [`examples/usxd-surface-canonical.example.json`](examples/usxd-surface-canonical.example.json), [`examples/usxd-surface-minimal.example.json`](examples/usxd-surface-minimal.example.json) (`npm run validate:usxd` checks all USXD surfaces under `examples/`).
 
-## Relation to uDOS-family
+## Relation to sibling repos
 
-The broader family workspace may keep historical modules (`uDOS-host`, `uDOS-thinui`, …). **v3.0.1** consolidates the demo into this monorepo shape first; split back to separate repos only after the demo is solid.
+The broader **uDos** family workspace may keep historical modules (`uDOS-host`, `uDOS-thinui`, …). **v3.0.1** consolidates the demo into this monorepo shape first; split back to separate repos only after the demo is solid.
 
-See also: [`../uDOS-dev/docs/v3-system-brief.md`](../uDOS-dev/docs/v3-system-brief.md) (bootstrap brief).
+See also: [`../uDosConnect/uDosDev/docs/v3-system-brief.md`](../uDosConnect/uDosDev/docs/v3-system-brief.md) (bootstrap brief; sibling under `~/Code/`).
 
 ## Companion: UniversalSurfaceXD (design + interchange)
 
-Portable surface vocabulary, interchange JSON, Figma handoff, and the browser **UX designer** live in the open-source repo **[github.com/fredporter/UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD)** (MIT). Optional local checkout: sibling **`../UniversalSurfaceXD`** next to the `uDOS-family` folder (same layout as [`uDOS-v3.code-workspace`](../uDOS-v3.code-workspace)). This monorepo is the **runnable uDOS v3 integration**; UniversalSurfaceXD is the **composer + lab + interchange** side. Keep `packages/schemas` and ThinUI copy aligned with `UniversalSurfaceXD/interchange/` when contracts change.
+Portable surface vocabulary, interchange JSON, Figma handoff, and the browser **UX designer** live in the open-source repo **[github.com/fredporter/UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD)** (MIT). Optional local checkout: sibling **`../UniversalSurfaceXD`** under **`~/Code/`** (same level as this repo). This monorepo is the **runnable uDos integration**; UniversalSurfaceXD is the **composer + lab + interchange** side. Keep `packages/schemas` and ThinUI copy aligned with `UniversalSurfaceXD/interchange/` when contracts change.
 
 ## Quick start
 

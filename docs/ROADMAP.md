@@ -2,6 +2,41 @@
 
 **Baseline:** The v3.0.1 local demo loop is **complete** per [MILESTONES.md](MILESTONES.md) and [BACKLOG.md](BACKLOG.md). Items below are **v3.0.2+** only.
 
+## Family v4 alignment (uDosDev specs)
+
+**Canonical folder:** [`uDosConnect/uDosDev/docs/specs/v4/`](../../uDosConnect/uDosDev/docs/specs/v4/) (sibling clone under `~/Code/`).
+
+This monorepo implements the **runnable integration** slice of the family platform. The following specs directly shape uDosGo work; keep [specs/README.md](specs/README.md) and schemas in lockstep when the uDosDev copies change.
+
+| Theme | Specs | Direction for uDosGo |
+| --- | --- | --- |
+| **Core + grid** | [`uDos-Spec-v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/uDos-Spec-v4.md), [`uDos-Grid-Spec-v4-2-1.md`](../../uDosConnect/uDosDev/docs/specs/v4/uDos-Grid-Spec-v4-2-1.md) | Reconcile with [ARCHITECTURE.md](ARCHITECTURE.md), [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md), ThinUI + `packages/shared` |
+| **Tasks + markdown** | [`TASK_SPEC_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/TASK_SPEC_v4.md), [`GFM_Enhanced_Specification_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/GFM_Enhanced_Specification_v4.md) | Hivemind task graph, feed text, vault docs |
+| **Contacts** | [`CONTACT_SCHEMA_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/CONTACT_SCHEMA_v4.md), [`contacts-db-template.txt`](../../uDosConnect/uDosDev/docs/specs/v4/contacts-db-template.txt) | `packages/schemas/contact`, WP bridge |
+| **Shell TUI (shared)** | [`SHELL_v4_command-palette.md`](../../uDosConnect/uDosDev/docs/specs/v4/SHELL_v4_command-palette.md), [`SHELL_v4_bubble-tea-tui.md`](../../uDosConnect/uDosDev/docs/specs/v4/SHELL_v4_bubble-tea-tui.md) | First Host/operator TUI path; **same palette + viewport rules** as **SonicScrewdriver** |
+| **Sonic handoff** | [`SONIC_v4_device-database.md`](../../uDosConnect/uDosDev/docs/specs/v4/SONIC_v4_device-database.md), [`SONIC_v4_ewaste-triage.md`](../../uDosConnect/uDosDev/docs/specs/v4/SONIC_v4_ewaste-triage.md) | APIs and UX when ThinUI or Host consumes catalog / triage data from Sonic |
+| **USXD → GUI** | [`INTEGRATION_v4_usxd-operational-gui.md`](../../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md) | **Browser GUI:** `apps/thinui` (React) from validated USXD; **UniversalSurfaceXD** lab + `ux:validate-surfaces`; terminal surfaces per **`SHELL_v4_*`** |
+
+**Execution tracking:** [TASKS.md](../TASKS.md) · family rounds [v4-dev-rounds.md](../../uDosConnect/uDosDev/docs/v4-dev-rounds.md).
+
+## v4 journey — status snapshot (integration monorepo)
+
+**Last reviewed:** 2026-04-10 · **Spec hub audit:** [`[UDGO-R02]`](../TASKS.md) **done** — full `specs/v4/` inventory in [specs/README.md](specs/README.md); re-extend when [uDosDev `README.md`](../../uDosConnect/uDosDev/docs/specs/v4/README.md) changes.
+
+| Area | State | Notes |
+| --- | --- | --- |
+| **Family dev standard (v4)** | **Adopted** | Task Forge, `dev-process-v4.md`, `.local` / `.compost`; root `package.json` meta **4.x** is dev-standard semver (not the v3.0.1 demo label). |
+| **v3.0.x milestones (product)** | **Closed (M1–M8)** | [MILESTONES.md](MILESTONES.md) — local demo, reliability, second scenario, USXD validation sweep, closure tranche. |
+| **Docs consolidation (plan P0–P4)** | **Done** | [docs/dev/docs-v4-consolidation-plan.md](dev/docs-v4-consolidation-plan.md); hub is [README.md](README.md). |
+| **USXD validation (integration + lab)** | **Done** | [`[UDGO-R01]`](../TASKS.md): `npm run validate:usxd:parity`; [specs/README.md](specs/README.md). |
+| **uDosDev specs v4 → this repo** | **Baseline done** (2026-04-10) | [specs/README.md](specs/README.md) lists every file in [uDosDev `specs/v4/README.md`](../../uDosConnect/uDosDev/docs/specs/v4/README.md) + integration vs sibling-product tables; maintenance when that README grows. |
+| **Shell TUI / shared command palette in Host** | **Not implemented** | [SHELL_v4_*](../../uDosConnect/uDosDev/docs/specs/v4/) linked for direction; Bubble Tea / Host TUI not in monorepo yet. |
+| **Sonic handoff (device DB / triage)** | **Docs only** | Specs linked; runtime consumption from ThinUI/Host deferred. |
+| **Repo split (host / thinui / hivemind)** | **Prep only** | [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md); no extraction performed. |
+| **GitHub branding / rename sweep** | **Backlog** | [`[UDGO-T001]`](../TASKS.md), [repo-identity-and-rename-v4.md](repo-identity-and-rename-v4.md). |
+
+**Cross-repo spine (family):** [uDosConnect/uDosDev/docs/roadmap-v4-family.md](../../uDosConnect/uDosDev/docs/roadmap-v4-family.md) — this monorepo matches the **uDos-Go** row (runnable core, ThinUI, grid canon, USXD validation). Governance stays in **uDosConnect**; USXD interchange lab in **UniversalSurfaceXD**; native Mac client is **Macdown** — out of tree here.
+
 ## Immediate post-demo (v3.0.2 candidates)
 
 - **Done (P0):** Job runner timeouts + vault write size cap + structured `tool.failed` / task `errorCode`; ThinUI SSE reconnect with backoff + status line; persistence decision (JSON for now) in [DATA-MODEL.md](DATA-MODEL.md).
@@ -35,7 +70,11 @@
 
 ## Active tranche
 
-Backlog: [BACKLOG.md](BACKLOG.md). **v3.0.3** is **closed** (M7–M8). New execution work should open a **v3.0.4+** or family plan line in the backlog feed.
+**Product backlog (v3.0.x):** [BACKLOG.md](BACKLOG.md) — all tranches through **v3.0.3 / M8** are **closed**; no open v3.0.x milestone queue.
+
+**v4 spec hub:** Baseline inventory parity complete — [`[UDGO-R02]`](../TASKS.md). When **uDosDev** adds spec files, update [specs/README.md](specs/README.md) in the same change set.
+
+**Optional:** **[UDGO-T001]** rename/branding sweep when scheduled.
 
 Historical execution order for v3.0.2:
 

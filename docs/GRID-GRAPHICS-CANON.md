@@ -5,7 +5,7 @@
 **Spec index:** [DISPLAY_STACK.md](DISPLAY_STACK.md)  
 **Pair spec:** [UniversalSurfaceXD v2 cannon](../../UniversalSurfaceXD/docs/decisions/UniversalSurfaceXD_v2-cannon.md) · [web (GitHub)](https://github.com/fredporter/UniversalSurfaceXD/blob/main/docs/decisions/UniversalSurfaceXD_v2-cannon.md) (portable surface declaration; filename uses **cannon**)
 
-This document is the **implementation-facing** copy of the grid–graphics contract for the **uDOS-v3 monorepo** (Host, Hivemind, ThinUI, schemas). **UniversalSurfaceXD** carries the cross-repo, transportable surface schema narrative; both stay aligned.
+This document is the **implementation-facing** copy of the grid–graphics contract for the **uDosGo** monorepo (Host, Hivemind, ThinUI, schemas). **UniversalSurfaceXD** carries the cross-repo, transportable surface schema narrative; both stay aligned.
 
 ---
 
@@ -140,7 +140,7 @@ Theme families (examples: **thinui-c64**, **thinui-teletext**, **thinui-nes-soni
 
 ---
 
-## uDOS-v3 implementation notes
+## uDosGo implementation notes
 
 - **`packages/schemas`:** evolve JSON/TS contracts so feed/task/event surfaces can reference **surface id**, **kind**, and **grid metadata** without duplicating business state.
 - **`apps/thinui`:** treat **80×30** and **16×24** as the default layout coordinate system for panel chrome and fixed views unless explicitly in adaptive mode.

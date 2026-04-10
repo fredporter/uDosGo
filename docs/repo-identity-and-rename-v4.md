@@ -11,12 +11,12 @@ From v3 onward, the stylized name **uDos** expands to **Universal Device Operati
 
 ---
 
-## What is different about *this* repo (today: `uDOS-v3`)?
+## What is different about *this* repo (**uDosGo**)?
 
 | Repo | Role |
 | --- | --- |
 | **This monorepo** | **Runnable integration:** Host + ThinUI + Hivemind + shared packages + schemas + demo scripts in **one** tree — the **local-first loop** you can `doctor` / `launch`. |
-| **uDOS-dev** | **Governance / workflow** only — no runtime. |
+| **uDosDev** ([`uDos-Dev`](https://github.com/fredporter/uDos-Dev) on GitHub, submodule under **uDosConnect**) | **Governance / workflow** only — no runtime. |
 | **UniversalSurfaceXD** | **Design + interchange + browser lab** — not the Host runtime. |
 | **uDOS-host / uDOS-thinui (v2 siblings)** | **Legacy / extraction references** — not the integration home for the v3-era demo (see [REPO-SPLIT-PREP.md](REPO-SPLIT-PREP.md)). |
 
@@ -63,8 +63,8 @@ The **GitHub repo name** should be **stable** and **versionless** so clones and 
 
 1. **GitHub:** Settings → Repository name → new name (redirects old URL for a while).
 2. **Local:** `git remote set-url origin git@github.com:fredporter/<new-name>.git` (or HTTPS).
-3. **Family:** `uDOS-v3.code-workspace` → rename file to match (e.g. `uDOS-family.code-workspace`) and update `path` keys if folder names change.
-4. **Docs:** global search `uDOS-v3`, `github.com/.../uDOS-v3` in **uDOS-dev**, **UniversalSurfaceXD**, **uDOS-docs**.
+3. **Family:** **`uDosGo.code-workspace`** (and `workspaces/*.code-workspace`) — update `path` keys if folder names change after a GitHub rename.
+4. **Docs:** global search legacy `uDOS-v3`, `github.com/.../uDOS-v3` in **uDosConnect**, **UniversalSurfaceXD**, **uDOS-docs** until fully migrated.
 5. **npm** `name` in root `package.json`: align with repo (`"name": "udos-run"` etc.) if you want consistency (optional; breaking for workspace users).
 
 ---

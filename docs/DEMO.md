@@ -83,7 +83,7 @@ That set is enough for external communication without promising the full product
 
 Use this as the script for video and QA.
 
-**Prereq:** complete [`QUICKSTART.md`](QUICKSTART.md) once at the repo root (`uDOS-v3/`).
+**Prereq:** complete [`QUICKSTART.md`](QUICKSTART.md) once at the repo root (`uDosGo/`).
 
 1. **Start Host + ThinUI** (from repo root): `npm run launch` or `npm run dev` — Host `http://127.0.0.1:8787`, ThinUI `http://127.0.0.1:5173`. Optional: `npm run launch:wp` or `npm run wp:up` for WordPress at `http://127.0.0.1:8080` (Docker).
 2. Open ThinUI; confirm **Host health** and (if WP is up) **WordPress bridge** JSON in the Output panel.

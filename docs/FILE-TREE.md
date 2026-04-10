@@ -1,11 +1,11 @@
-# File tree — uDOS v3 monorepo (v3.0.1 target)
+# File tree — uDosGo monorepo (v3.0.1 target)
 
 Planning artifact: **target layout** for implementation. Empty dirs may contain only `README.md` placeholders until code lands.
 
 ## Repository root
 
 ```text
-uDOS-v3/
+uDosGo/
   README.md
   package.json                 # workspaces root (when implemented)
   tsconfig.base.json          # optional shared TS config
@@ -112,9 +112,9 @@ uDOS-v3/
 
 Created in the workspace:
 
-- `uDOS-v3/README.md`
-- `uDOS-v3/docs/*` (all planning docs)
-- `uDOS-v3/packages/schemas/*.schema.json` (first drafts)
+- `uDosGo/README.md`
+- `uDosGo/docs/*` (all planning docs)
+- `uDosGo/packages/schemas/*.schema.json` (first drafts)
 - Placeholder `README.md` files under `apps/`, `packages/`, `demo/`, `infra/` as needed
 
 **M1 implemented:**

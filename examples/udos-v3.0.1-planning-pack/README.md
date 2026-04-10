@@ -1,5 +1,7 @@
 # uDOS v3.0.1 Planning Pack
 
+> **Frozen snapshot (archive).** Do not treat the nested `docs/` copy here as the live source of truth. **Canonical documentation** is the repo-root **`docs/`** tree ([`../../docs/README.md`](../../docs/README.md)). Option **A** from [docs/dev/docs-v4-consolidation-plan.md](../../docs/dev/docs-v4-consolidation-plan.md) § P1 — updates belong in root `docs/`, not duplicated into this pack.
+
 ## Purpose
 
 uDOS v3.0.1 is the first clean planning cut for a working local-first demo.
@@ -38,11 +40,8 @@ A user can:
 
 ## Planning documents
 
-- `docs/ARCHITECTURE.md`
-- `docs/SCOPE-v3.0.1.md`
-- `docs/DEMO.md`
-- `docs/DATA-MODEL.md`
-- `docs/WP-BRIDGE.md`
-- `docs/MILESTONES.md`
-- `docs/REPO-STRUCTURE.md`
+Historical duplicate filenames under `docs/` were **removed** from this pack (2026-04) to stop drift; your backup holds the old snapshots if needed.
 
+**Canonical paths** (edit only here): [repo `docs/`](../../docs/README.md) — same topic filenames (`ARCHITECTURE.md`, `SCOPE-v3.0.1.md`, …).
+
+**Pointer only:** [`docs/README.md`](docs/README.md) in this folder.

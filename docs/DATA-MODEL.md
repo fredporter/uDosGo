@@ -23,7 +23,7 @@ Canonical on-disk layout (configurable root; default name illustrative):
 | **Events** | Append-only narrative of what happened (audit + ThinUI log). |
 | **WordPress** | Identity, sessions, capabilities, restricted pages, plugin options. |
 
-### v3 monorepo on-disk files (default `uDOS-v3/.udos-data`)
+### v3 monorepo on-disk files (default `uDosGo/.udos-data`)
 
 | Path | Contents |
 |------|----------|

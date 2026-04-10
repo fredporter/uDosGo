@@ -25,6 +25,8 @@
 
 **Rule:** ThinUI and Hivemind do not own the disk truth. **Host** is the system of record for spool, tasks, events, and vault writes initiated by tools. WordPress owns its own DB/files under Host-provisioned paths.
 
+**Family v4 boundary:** Governance and locked specs live in **uDosConnect** (`uDosDev/docs/specs/v4/`). **This monorepo** ships the runnable Host + Hivemind + ThinUI integration and links that catalog from [specs/README.md](specs/README.md); it does not duplicate the full spec corpus in-tree.
+
 ---
 
 ## Module boundaries
@@ -174,3 +176,19 @@ Base URL: `http://127.0.0.1:8787` (or `PORT` / `UDOS_DATA_ROOT` as configured). 
 Failed tools emit `tool.failed` with `payload.code`, `payload.retryable`, and `payload.error`; tasks store `error` + `errorCode`. See [DATA-MODEL.md](DATA-MODEL.md).
 
 WordPress plugin REST is documented in [`apps/wordpress-plugin-empire-local/README.md`](../apps/wordpress-plugin-empire-local/README.md).
+
+---
+
+## Family v4 specifications (handoff)
+
+Platform, task, contact, grid, GFM, Shell TUI, and Sonic mini-specs are maintained as **repo-tracked copies** under **`uDosConnect/uDosDev/docs/specs/v4/`** (sibling of this repo). They are the cross-family contract for:
+
+- **Tasks and events** — [`TASK_SPEC_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/TASK_SPEC_v4.md) with Hivemind and Host persistence.
+- **Contacts** — [`CONTACT_SCHEMA_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/CONTACT_SCHEMA_v4.md) with `packages/schemas` and the Empire ↔ WordPress bridge.
+- **Grid and display** — [`uDos-Grid-Spec-v4-2-1.md`](../../uDosConnect/uDosDev/docs/specs/v4/uDos-Grid-Spec-v4-2-1.md) alongside [GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md) and [specs/README.md](specs/README.md).
+- **Operator markdown** — [`GFM_Enhanced_Specification_v4.md`](../../uDosConnect/uDosDev/docs/specs/v4/GFM_Enhanced_Specification_v4.md).
+- **Shell TUI** — [`SHELL_v4_command-palette.md`](../../uDosConnect/uDosDev/docs/specs/v4/SHELL_v4_command-palette.md), [`SHELL_v4_bubble-tea-tui.md`](../../uDosConnect/uDosDev/docs/specs/v4/SHELL_v4_bubble-tea-tui.md); primary implementation lane is **SonicScrewdriver**; uDosGo consumes the same behaviour when exposing a terminal shell over Host.
+- **Sonic integration** — [`SONIC_v4_device-database.md`](../../uDosConnect/uDosDev/docs/specs/v4/SONIC_v4_device-database.md), [`SONIC_v4_ewaste-triage.md`](../../uDosConnect/uDosDev/docs/specs/v4/SONIC_v4_ewaste-triage.md) for catalog and triage semantics when the integration stack surfaces hardware data.
+- **USXD → operational GUI** — [`INTEGRATION_v4_usxd-operational-gui.md`](../../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md): validated interchange → **`apps/thinui`** (React) and/or Bubble Tea (Shell/Sonic); UniversalSurfaceXD lab as reference.
+
+**Index:** [`uDosConnect/uDosDev/docs/specs/v4/README.md`](../../uDosConnect/uDosDev/docs/specs/v4/README.md).
