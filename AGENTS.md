@@ -4,7 +4,7 @@
 
 ## Scope
 
-- **This repo** is the **runnable integration monorepo** (Host, ThinUI, Hivemind, schemas, demo). On GitHub: **[uDos-Go](https://github.com/fredporter/uDosGo)**. Local folder: **`~/Code/uDosGo/`**. Prefer **`main`**; short-lived branches only with a clear reason.
+- **This repo** is the **runnable integration monorepo** (Host, ThinUI, Hivemind, schemas, demo). On GitHub: **[uDosGo](https://github.com/fredporter/uDosGo)** (`fredporter/uDosGo`). Local folder: **`~/Code/uDosGo/`**. Prefer **`main`**; short-lived branches only with a clear reason.
 - **Not in scope:** UniversalSurfaceXD lab UI, private product binaries, full marketplace — see README and [SCOPE-v3.0.1.md](docs/SCOPE-v3.0.1.md).
 
 ## Dev standard (v4)
@@ -18,7 +18,7 @@
 - **Multi-root workspace (v4):** default **[`uDosGo.code-workspace`](uDosGo.code-workspace)** at repo root; **focused** variants in **[`workspaces/`](workspaces/README.md)** (`uDOS-v4`, Linkdown, Macdown — same sibling roots, paths relative to `workspaces/`).
 - **Design / surfaces:** [UniversalSurfaceXD](https://github.com/fredporter/UniversalSurfaceXD) (v4 lab) — grid/interchange alignment; **canon** text in [docs/GRID-GRAPHICS-CANON.md](docs/GRID-GRAPHICS-CANON.md).
 - **Family workflow:** [uDosDev](https://github.com/fredporter/uDosDev) (submodule under uDosConnect) — governance only. **v4 rounds index:** [`uDosConnect/uDosDev/docs/v4-dev-rounds.md`](../uDosConnect/uDosDev/docs/v4-dev-rounds.md).
-- **Family v4 specs (tasks, contacts, grid, GFM, Shell TUI, Sonic, USXD→GUI):** [`uDosConnect/uDosDev/docs/specs/v4/`](../uDosConnect/uDosDev/docs/specs/v4/) — map to this repo in [`docs/specs/README.md`](docs/specs/README.md) § Family v4; [`docs/ROADMAP.md`](docs/ROADMAP.md) § Family v4 alignment; **USXD → ThinUI + Shell:** [`INTEGRATION_v4_usxd-operational-gui.md`](../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md).
+- **Family v4 specs (tasks, contacts, grid, GFM, Shell TUI, Sonic, USXD→GUI):** [`uDosConnect/uDosDev/docs/specs/v4/`](../uDosConnect/uDosDev/docs/specs/v4/) — map to this repo in [`docs/specs/README.md`](docs/specs/README.md) § Family v4; [`docs/ROADMAP.md`](docs/ROADMAP.md) § Family v4 alignment; **USXD → ThinUI + Shell:** [`INTEGRATION_v4_usxd-operational-gui.md`](../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md). **Variables / uCode (draft):** [`docs/specs/uDos-variables-ucode-v4.md`](docs/specs/uDos-variables-ucode-v4.md).
 
 ## Version field
 

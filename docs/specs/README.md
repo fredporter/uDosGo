@@ -41,6 +41,12 @@ These files are the **engineering handoff** line for the uDos family. They infor
 
 **Index + decisions:** [`uDosConnect/uDosDev/docs/specs/v4/README.md`](../../../uDosConnect/uDosDev/docs/specs/v4/README.md) · [`DECISIONS-2026-04_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/DECISIONS-2026-04_v4.md)
 
+### uDosGo implementation specs (this repo)
+
+| Document | Role |
+| --- | --- |
+| [uDos-variables-ucode-v4.md](uDos-variables-ucode-v4.md) | **Draft** — `$variable$` interpolation (Inkdown `$...$` math preserved), namespaces, phased roadmap, **uCode v4** `[VAR|…]` stub + scaffold for full command reference |
+
 ---
 
 ## Canon (read first)

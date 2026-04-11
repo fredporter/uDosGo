@@ -10,11 +10,17 @@ Task Forge layout (family dev standard **v4**). **Family rounds index:** [`../uD
 
 ## Done
 
+- [x] [UDGO-R04] **uDos Variables + uCode v4 dev spec** — [`docs/specs/uDos-variables-ucode-v4.md`](docs/specs/uDos-variables-ucode-v4.md) (roadmap phases A–C; Inkdown formula heritage; Linkdown → **uDosGo** / uCode; commands reference stub + §11 scaffold); [`docs/specs/README.md`](docs/specs/README.md) + [`docs/ROADMAP.md`](docs/ROADMAP.md) linked #docs #core
+
+- [x] [UDGO-NEXT] **Doc drift maintenance** — `npm run doc:drift` clean (2026-04); legacy map table unchanged #docs
+
+- [x] [UDGO-NAME] **Canonical naming** — `AGENTS.md` GitHub link text **uDosGo** (`fredporter/uDosGo`); pairing with **SonicScrewdriver** unchanged in workspace table #docs
+
 - [x] [UDGO-T001] **GitHub branding sweep** — canonical **`fredporter/uDosGo`** documented in [`docs/repo-identity-and-rename-v4.md`](docs/repo-identity-and-rename-v4.md); **`uDosDev`** links use **`fredporter/uDosDev`** (not `uDos-Dev`); workspace + `package.json` already aligned; optional repo rename deferred per checklist in same doc #infra
 
 - [x] [UDGO-UDEV-ARCH] **uDosDev `@dev` archive** — progress + delta in [`docs/dev/udosdev-v4-upgrade-progress.md`](docs/dev/udosdev-v4-upgrade-progress.md), [`docs/dev/udosdev-v4-upgrade-delta.md`](docs/dev/udosdev-v4-upgrade-delta.md); uDosDev **`[UDEV-R02]`** (tracked tree → `docs/archive/pre-v4-atdev/`, root `@dev` symlink) #docs
 
-- [x] [UDGO-R03] **Legacy doc drift** — `npm run doc:drift` ([`scripts/check-doc-drift.mjs`](scripts/check-doc-drift.mjs)); §4–5 in [docs/dev/family-legacy-doc-map-v4.md](docs/dev/family-legacy-doc-map-v4.md) updated (2026-04-11). uDosGo `docs/` clean for `uDOS-family` / `uDOS-v3` / `sonic-v1` / stray `syncdown` outside meta · **USXD-R00/R11** remain on [UniversalSurfaceXD/TASKS.md](../UniversalSurfaceXD/TASKS.md) for that repo #docs
+- [x] [UDGO-R03] **Legacy doc drift** — `npm run doc:drift` ([`scripts/check-doc-drift.mjs`](scripts/check-doc-drift.mjs)); §4–5 in [docs/dev/family-legacy-doc-map-v4.md](docs/dev/family-legacy-doc-map-v4.md) updated (2026-04-11). uDosGo `docs/` clean per drift patterns (see script + legacy map §3) · **USXD-R00/R11** remain on [UniversalSurfaceXD/TASKS.md](../UniversalSurfaceXD/TASKS.md) for that repo #docs
 
 - [x] [UDGO-R02] **Family v4 specs** — hub parity with [`uDosConnect/uDosDev/docs/specs/v4/README.md`](../uDosConnect/uDosDev/docs/specs/v4/README.md) inventory (audit **2026-04-10**): second table for Chatdown / Linkdown / Macdown / matrix / MCP / Apple delta; **inventory parity** note in [`docs/specs/README.md`](docs/specs/README.md); [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) boundary; [`apps/thinui/README.md`](apps/thinui/README.md) + [`packages/schemas/README.md`](packages/schemas/README.md) handoff lines · *Maintenance:* when uDosDev README adds rows, extend hub table same pass #core #docs
 
