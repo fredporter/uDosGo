@@ -13,7 +13,7 @@ This folder is the **authoritative doc tree** for the repo. The **v3.0.1** label
 
 **uDosDev workspace migration (v4):** [dev/udosdev-v4-upgrade-progress.md](dev/udosdev-v4-upgrade-progress.md) · [dev/udosdev-v4-upgrade-delta.md](dev/udosdev-v4-upgrade-delta.md) — archive path, symlink compatibility, task id **`[UDEV-R02]`**.
 
-**Reading order (layers):** **Canon** ([GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md)) → **Specs / engines** (§3 below) → **Delivery** (§5) → **Family handoff** ([specs/README.md](specs/README.md) § Family v4).
+**Reading order (layers):** **Canon** ([GRID-GRAPHICS-CANON.md](GRID-GRAPHICS-CANON.md)) → **Specs / engines** (§3 below) → **Delivery** (§5) → **Family handoff** ([specs/README.md](specs/README.md) § Family v4). **Family execution ledger (versioned Moves 4.2.0–4.9.9):** [uDos-v4-execution-plan-versioned-moves.md](../uDosConnect/uDosDev/docs/future/uDos-v4-execution-plan-versioned-moves.md) (uDosDev).
 
 ---
 
