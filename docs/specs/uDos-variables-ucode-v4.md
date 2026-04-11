@@ -227,6 +227,7 @@ The **complete** uCode v4 language — command DSL, scripting keywords, `POKE`/M
 
 - **[`UCODE_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** (`~/Code/uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md`)
 - **[`UCODE_v4_addendum-quotes-markup-symbols.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md)** — quotes, escapes, markup/HTML mapping, path backslashes, reserved `\\`, whitespace, continuation (**locked**)
+- **[`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md)** — `@workspace`, `::` schemes, wikilinks, navigation hints (**draft**)
 
 This document (**uDos Variables**) only defines **`$variable$` interpolation** in markdown surfaces and how namespaces map to family schemas. Session `LET` / inline `$x$` behaviour follows **UCODE v4** when the interpreter is present.
 

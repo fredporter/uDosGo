@@ -27,6 +27,7 @@ These files are the **engineering handoff** line for the uDos family. They infor
 | USXD → operational GUI | [`INTEGRATION_v4_usxd-operational-gui.md`](../../../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md) | **Locked** — design → validate → generate → wire **`apps/thinui`** (React) + Shell/Sonic (Bubble Tea); USXD lab reference |
 | uCode v4 | [`UCODE_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md) | **Locked** — language + Go/TS runtime; POKE/MCP; pairs with [uDos-variables-ucode-v4.md](uDos-variables-ucode-v4.md) |
 | uCode v4 addendum | [`UCODE_v4_addendum-quotes-markup-symbols.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md) | **Locked** — quotes/escapes, markup output, paths, reserved `\\`, symbols, whitespace |
+| uCode v4 addendum 2 | [`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md) | **Draft** — linking / navigation (`@`, `::`, wikilinks, GitHub, sequence hints); lock via uDosDev **[UDEV-R12](../../../uDosConnect/uDosDev/TASKS.md)** |
 
 **Sibling products & family analysis (same `specs/v4/` folder):** listed in [uDosDev `README.md`](../../../uDosConnect/uDosDev/docs/specs/v4/README.md); not implemented inside uDosGo, but part of the **full v4 inventory** for cross-repo alignment.
 
