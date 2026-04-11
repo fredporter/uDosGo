@@ -105,6 +105,7 @@
 - **Spatial / storage ecosystem (locked):** [`SPATIAL_STORAGE_ECOSYSTEM_v1.md`](../../uDosConnect/uDosDev/docs/specs/v4/SPATIAL_STORAGE_ECOSYSTEM_v1.md) — **uCell**, **uTile** / **uGrid**, **uCoin**, **uRing**; referenced from the family roadmap and **v4.4.0** consolidated rounds plan for PlaceRef / map / NFC alignment.
 - **uSpace / cloud fallback (locked):** [`SPATIAL_HOSTING_USPACE_CLOUD_FALLBACK_v1.md`](../../uDosConnect/uDosDev/docs/specs/v4/SPATIAL_HOSTING_USPACE_CLOUD_FALLBACK_v1.md) — cloud tiers, view limits, free tier, illustrative **`space.publish`** hooks.
 - **Unified data WP / HubSpot / uDos (locked):** [`UNIFIED_DATA_SCHEMA_WP_HUBSPOT_uDOS_v1.md`](../../uDosConnect/uDosDev/docs/specs/v4/UNIFIED_DATA_SCHEMA_WP_HUBSPOT_uDOS_v1.md) — `wp_users`, `wp_usermeta`, **`$user.*$`**, `wp_udos_activity`, FDX-shaped payloads.
+- **UniversalVectorIL / UVIL (locked boundary):** [`UNIVERSAL_VECTOR_IL_UVIL_v1.md`](../../uDosConnect/uDosDev/docs/specs/v4/UNIVERSAL_VECTOR_IL_UVIL_v1.md) — vector/schematic/teletext/QR **`UniversalVectorIL/`** vs uDos core + USXD.
 - **TASKS:** [UDGO-R02](../../TASKS.md) tracks spec drift; consolidation **does not** replace that — it makes `docs/` easier to keep aligned.
 
 ---
