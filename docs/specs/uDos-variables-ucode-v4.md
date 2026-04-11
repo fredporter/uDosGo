@@ -1,7 +1,7 @@
 # uDos Variables v4 — Inkdown formula heritage & uCode bridge
 
 **Status:** Draft — roadmapped dev spec (**uDosGo** integration monorepo)  
-**Base:** Inkdown-style `$...$` inline formula syntax (preserved from editor heritage; see **Macdown** / Inkdown product context in family docs)  
+**Base:** Inkdown-style `$...$` inline formula syntax (preserved from editor heritage; see **uMacDown** / Inkdown product context in family docs)  
 **Extension:** `$variable$`, `{$variable$}`, nested fields, optional filters — **without** deprecating math formulas  
 **Goal:** Lightweight substitution across markdown surfaces, **uCode v4** session keys, and spatial/gameplay context — precursor to full uCode evaluator in [`uDosConnect/uDosDev/docs/future/uDos-v4-gameplay-chatdown-development-cycle-brief.md`](../../../uDosConnect/uDosDev/docs/future/uDos-v4-gameplay-chatdown-development-cycle-brief.md) (family future brief)
 
@@ -13,7 +13,7 @@
 
 | Setting | Behaviour |
 | --- | --- |
-| Use `$` for inline formulas | Toggle / preference in **Macdown** (Inkdown) settings |
+| Use `$` for inline formulas | Toggle / preference in **uMacDown** (Inkdown) settings |
 | `$content$` with closing `$` | Inline math / LaTeX-style formula rendering |
 
 **Original purpose:** Math formulas (e.g. `$E = mc^2$`).
@@ -43,7 +43,7 @@ Preserve math where the inner span is clearly **not** a simple identifier (see �
 | --- | --- |
 | Token looks like **identifier path** (alphanumeric, `-`, `_`, `.`; no spaces) | **Variable** |
 | Contains `=`, operators, LaTeX (`\`), or clear math | **Formula** |
-| Ambiguous | Resolver may treat as **literal** or **variable** per product setting — document the choice in ThinUI / Macdown |
+| Ambiguous | Resolver may treat as **literal** or **variable** per product setting — document the choice in ThinUI / uMacDown |
 
 ---
 
@@ -171,7 +171,7 @@ Math with interpolated variables, string/date helpers, `$if(...)$` — **not** r
 - Variable **registry** read/write via agreed MCP tools (tool names TBD with implementation).
 - Template helper may expose `render` with a variable map — same spec, server-side.
 
-**No “handoff to Linkdown” as the integration hinge** — **uDosGo** is the runnable core; **Macdown** / **Chatdown** / **Linkdown** consume the same rules when they opt in.
+**No “handoff to Linkdown” as the integration hinge** — **uDosGo** is the runnable core; **uMacDown** / **uChatDown** / **Linkdown** (and **uFeedThru** when applicable) consume the same rules when they opt in.
 
 ---
 
@@ -180,8 +180,8 @@ Math with interpolated variables, string/date helpers, `$if(...)$` — **not** r
 | Surface | Role |
 | --- | --- |
 | **uDosGo** (`apps/thinui`, Host) | Registry, preview resolution, MCP exposure |
-| **Macdown** | Inkdown formula toggle + variable preview (product timeline) |
-| **Chatdown** | Document panel + chat may resolve session variables |
+| **uMacDown** | Inkdown formula toggle + variable preview (product timeline) |
+| **uChatDown** | Document panel + chat may resolve session variables |
 | **SonicScrewdriver** | Device fields as `$device.*$` in templates |
 | **Gameplay** | `$gameplay.*$` when lens/skin/runtime exists |
 
@@ -227,7 +227,8 @@ The **complete** uCode v4 language — command DSL, scripting keywords, `POKE`/M
 
 - **[`UCODE_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** (`~/Code/uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md`)
 - **[`UCODE_v4_addendum-quotes-markup-symbols.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md)** — quotes, escapes, markup/HTML mapping, path backslashes, reserved `\\`, whitespace, continuation (**locked**)
-- **[`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md)** — `@workspace`, `::` schemes, wikilinks, navigation hints (**draft**)
+- **[`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md)** — `@workspace`, `::` schemes, wikilinks, navigation hints (**locked**)
+- **[`UCODE_v4_family-lock-2026-04-11.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_family-lock-2026-04-11.md)** — pack inventory + implementation summary (**locked**)
 - **[`UCODE_v4_addendum-3-execution-runtime-sandboxing.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-3-execution-runtime-sandboxing.md)** — execution modes, prompts, sandboxing, limits (**locked**)
 
 This document (**uDos Variables**) only defines **`$variable$` interpolation** in markdown surfaces and how namespaces map to family schemas. Session `LET` / inline `$x$` behaviour follows **UCODE v4** when the interpreter is present.
@@ -236,4 +237,4 @@ This document (**uDos Variables**) only defines **`$variable$` interpolation** i
 
 ## 11. One-line summary (this doc)
 
-**Inkdown `$...$` math stays.** **uDos Variables v4** adds `$VAR$` and dotted paths for core, contact, story, spatial, gameplay, and project keys — with frontmatter first; full **uCode v4** surface is **[UCODE_v4.md](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** plus addenda (quotes/markup, linking draft, execution/sandboxing). **uDosGo** owns registry + MCP shape; Macdown/Chatdown/ThinUI are consumers.
+**Inkdown `$...$` math stays.** **uDos Variables v4** adds `$VAR$` and dotted paths for core, contact, story, spatial, gameplay, and project keys — with frontmatter first; full **uCode v4** surface is **[UCODE_v4.md](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** plus addenda (quotes/markup, linking draft, execution/sandboxing). **uDosGo** owns registry + MCP shape; uMacDown / uChatDown / ThinUI are consumers.

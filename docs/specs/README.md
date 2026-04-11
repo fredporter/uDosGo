@@ -27,7 +27,8 @@ These files are the **engineering handoff** line for the uDos family. They infor
 | USXD → operational GUI | [`INTEGRATION_v4_usxd-operational-gui.md`](../../../uDosConnect/uDosDev/docs/specs/v4/INTEGRATION_v4_usxd-operational-gui.md) | **Locked** — design → validate → generate → wire **`apps/thinui`** (React) + Shell/Sonic (Bubble Tea); USXD lab reference |
 | uCode v4 | [`UCODE_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md) | **Locked** — language + Go/TS runtime; POKE/MCP; pairs with [uDos-variables-ucode-v4.md](uDos-variables-ucode-v4.md) |
 | uCode v4 addendum | [`UCODE_v4_addendum-quotes-markup-symbols.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md) | **Locked** — quotes/escapes, markup output, paths, reserved `\\`, symbols, whitespace |
-| uCode v4 addendum 2 | [`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md) | **Draft** — linking / navigation (`@`, `::`, wikilinks, GitHub, sequence hints); lock via uDosDev **[UDEV-R12](../../../uDosConnect/uDosDev/TASKS.md)** |
+| uCode v4 addendum 2 | [`UCODE_v4_addendum-2-linking-navigation.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-2-linking-navigation.md) | **Locked** — linking / navigation (`@`, `::`, wikilinks, GitHub, sequence hints) |
+| uCode v4 family lock | [`UCODE_v4_family-lock-2026-04-11.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_family-lock-2026-04-11.md) | **Locked** — pack inventory + implementation summary (2026-04-11) |
 | uCode v4 addendum 3 | [`UCODE_v4_addendum-3-execution-runtime-sandboxing.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-3-execution-runtime-sandboxing.md) | **Locked** — execution modes, sandboxing, prompts, limits, logging, TUI alignment |
 | v4.4–v4.8 rounds (planning) | [`uDos-v4-rounds-consolidated-execution-plan.md`](../../../uDosConnect/uDosDev/docs/future/uDos-v4-rounds-consolidated-execution-plan.md) | **Locked for planning** — dependency graph, deliverables, success criteria |
 
@@ -35,11 +36,11 @@ These files are the **engineering handoff** line for the uDos family. They infor
 
 | Spec | Path (sibling `uDosConnect`) | Role in **uDosGo** |
 | --- | --- | --- |
-| Chatdown | [`CHATDOWN_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/CHATDOWN_v4.md) | **Chatdown** product line — context / family scope only |
+| uChatDown | [`CHATDOWN_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/CHATDOWN_v4.md) | **uChatDown** product line (uDosDev spec filename **CHATDOWN_v4**) — context / family scope only |
 | Linkdown | [`LINKDOWN_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/LINKDOWN_v4.md), [`LINKDOWN_v4_updates.md`](../../../uDosConnect/uDosDev/docs/specs/v4/LINKDOWN_v4_updates.md) | **Linkdown** editor — context only |
-| Macdown (Syncdown) | [`SYNCDOWN_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/SYNCDOWN_v4.md) | Native macOS client (**Macdown**) — context only |
+| uMacDown (Syncdown / native app) | [`SYNCDOWN_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/SYNCDOWN_v4.md) | Native macOS client — clone **`~/Code/uMacDown`**; uDosDev **SYNCDOWN_v4** — context only |
 | Product matrix | [`v4_PRODUCT_MATRIX.md`](../../../uDosConnect/uDosDev/docs/specs/v4/v4_PRODUCT_MATRIX.md) | Family product positioning — optional scope checks |
-| Apple / sync-chat delta | [`v4-1-SYNC_CHAT_APPLE_UPDATE.md`](../../../uDosConnect/uDosDev/docs/specs/v4/v4-1-SYNC_CHAT_APPLE_UPDATE.md) | Sync / chat handoff — Macdown & family context |
+| Apple / sync-chat delta | [`v4-1-SYNC_CHAT_APPLE_UPDATE.md`](../../../uDosConnect/uDosDev/docs/specs/v4/v4-1-SYNC_CHAT_APPLE_UPDATE.md) | Sync / chat handoff — uMacDown & family context |
 | MCP analysis | [`MCP-ANALYSIS-BRIEF.txt`](../../../uDosConnect/uDosDev/docs/specs/v4/MCP-ANALYSIS-BRIEF.txt) | MCP tooling analysis — governance artifact |
 
 **Inventory parity:** Every file named in [uDosDev `docs/specs/v4/README.md`](../../../uDosConnect/uDosDev/docs/specs/v4/README.md) is linked from this page (audit **2026-04-10**). When that README gains entries, add a row here in the same pass.
