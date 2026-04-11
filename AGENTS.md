@@ -4,7 +4,7 @@
 
 ## Shell / CLI aliases (v4)
 
-- **Retro BASIC → modern commands:** [`docs/specs/RETRO_COMMAND_ALIASES_v4.md`](docs/specs/RETRO_COMMAND_ALIASES_v4.md) — **`@udos/shared`** [`packages/shared/src/retro-command-aliases.ts`](packages/shared/src/retro-command-aliases.ts) (`resolveRetroCommandLine`, etc.). Wire Host / future Shell TUI to resolve a line before dispatch.
+- **Retro BASIC → modern commands:** [`docs/specs/RETRO_COMMAND_ALIASES_v4.md`](docs/specs/RETRO_COMMAND_ALIASES_v4.md) — **`@udos/shared`** [`packages/shared/src/retro-command-aliases.ts`](packages/shared/src/retro-command-aliases.ts). **ThinUI** feed submit uses **`resolveRetroForSingleLineInput()`**; **Host** keeps **`metadata.retroAlias`**. Future Shell TUI: same helper per line.
 
 ## Scope
 

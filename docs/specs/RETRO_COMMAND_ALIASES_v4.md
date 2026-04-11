@@ -3,7 +3,9 @@
 **Status:** Locked  
 **Principle:** Modern command structure + retro BASIC aliases for nostalgia and ease of use.
 
-**Implementation:** `packages/shared/src/retro-command-aliases.ts` — `resolveRetroCommandLine()`, `expandPokeLine()`, `formatRetroHelpBanner()`, `listRetroAliasNames()`. Import from **`@udos/shared`**. Shell TUI / Host dispatch should call **`resolveRetroCommandLine()`** on each line before routing.
+**Implementation:** `packages/shared/src/retro-command-aliases.ts` — `resolveRetroCommandLine()`, `resolveRetroForSingleLineInput()` (skips multi-line notes), `expandPokeLine()`, `formatRetroHelpBanner()`, `listRetroAliasNames()`. Import from **`@udos/shared`**.
+
+**Wired today:** **`apps/thinui`** applies **`resolveRetroForSingleLineInput()`** on feed submit; stores **`metadata.retroAlias`** `{ canonical, original, modern }` when an alias expanded. **Host** `pickFeedMetadata` persists `retroAlias` alongside **`surfaceRef`**. CLI demo: `npm run retro:line -- PEEK` (after `npm run build -w @udos/shared`). Future Shell TUI should call **`resolveRetroCommandLine()`** per line the same way.
 
 ---
 

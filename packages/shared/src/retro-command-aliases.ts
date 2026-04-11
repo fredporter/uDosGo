@@ -169,6 +169,38 @@ export function resolveRetroCommandLine(input: string): RetroResolveResult {
   };
 }
 
+export type RetroFeedPrepareResult = {
+  /** Text to store or send (modern form when a retro alias matched). */
+  raw: string;
+  wasRetroAlias: boolean;
+  canonicalRetro?: string;
+  /** Trimmed input line as entered (empty when input is empty). */
+  originalLine: string;
+};
+
+/**
+ * For single-line inbox / shell input: expand retro aliases to modern syntax.
+ * **Multi-line** text is never rewritten (pasted notes stay verbatim).
+ */
+export function resolveRetroForSingleLineInput(
+  input: string,
+): RetroFeedPrepareResult {
+  const trimmed = input.trim();
+  if (!trimmed) {
+    return { raw: "", wasRetroAlias: false, originalLine: "" };
+  }
+  if (/[\r\n]/.test(input)) {
+    return { raw: trimmed, wasRetroAlias: false, originalLine: trimmed };
+  }
+  const r = resolveRetroCommandLine(trimmed);
+  return {
+    raw: r.wasRetroAlias ? r.line : trimmed,
+    wasRetroAlias: r.wasRetroAlias,
+    canonicalRetro: r.canonicalRetro,
+    originalLine: trimmed,
+  };
+}
+
 /** Retro command names (uppercase), sorted — for tab completion. */
 export function listRetroAliasNames(): string[] {
   const names = new Set<string>(Object.keys(RETRO_TO_MODERN));

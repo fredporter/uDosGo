@@ -5,6 +5,7 @@ import {
   formatRetroHelpBanner,
   listRetroAliasNames,
   resolveRetroCommandLine,
+  resolveRetroForSingleLineInput,
 } from "../dist/retro-command-aliases.js";
 
 test("PEEK → mcp list (case-insensitive)", () => {
@@ -56,4 +57,17 @@ test("formatRetroHelpBanner is boxed and mentions PEEK", () => {
   assert.match(s, /╔═+/);
   assert.match(s, /PEEK/);
   assert.match(s, /mcp list/);
+});
+
+test("resolveRetroForSingleLineInput skips multi-line notes", () => {
+  const t = "DIR\noops";
+  const r = resolveRetroForSingleLineInput(t);
+  assert.equal(r.wasRetroAlias, false);
+  assert.equal(r.raw, "DIR\noops".trim());
+});
+
+test("resolveRetroForSingleLineInput rewrites single-line PEEK", () => {
+  const r = resolveRetroForSingleLineInput("peek");
+  assert.equal(r.raw, "mcp list");
+  assert.equal(r.wasRetroAlias, true);
 });

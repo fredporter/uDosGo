@@ -10,9 +10,30 @@ export function pickFeedMetadata(body: unknown): Record<string, unknown> | undef
   }
   const m = (body as { metadata: unknown }).metadata;
   if (typeof m !== "object" || m === null) return undefined;
-  const surfaceRef = (m as { surfaceRef?: unknown }).surfaceRef;
-  if (typeof surfaceRef !== "string") return undefined;
-  const s = surfaceRef.trim();
-  if (!s || !SURFACE_REF_RE.test(s)) return undefined;
-  return { surfaceRef: s };
+  const meta = m as Record<string, unknown>;
+  const out: Record<string, unknown> = {};
+
+  const surfaceRef = meta.surfaceRef;
+  if (typeof surfaceRef === "string") {
+    const s = surfaceRef.trim();
+    if (s && SURFACE_REF_RE.test(s)) out.surfaceRef = s;
+  }
+
+  const ra = meta.retroAlias;
+  if (typeof ra === "object" && ra !== null) {
+    const o = ra as Record<string, unknown>;
+    if (
+      typeof o.canonical === "string" &&
+      typeof o.original === "string" &&
+      typeof o.modern === "string"
+    ) {
+      out.retroAlias = {
+        canonical: o.canonical,
+        original: o.original,
+        modern: o.modern,
+      };
+    }
+  }
+
+  return Object.keys(out).length > 0 ? out : undefined;
 }

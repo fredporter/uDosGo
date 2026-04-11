@@ -35,6 +35,15 @@
           "type": "string",
           "maxLength": 256,
           "description": "Optional opaque USXD / layout handle; validated on POST by Host"
+        },
+        "retroAlias": {
+          "type": "object",
+          "description": "Set by ThinUI when a retro BASIC alias was expanded to modern syntax (single-line input)",
+          "properties": {
+            "canonical": { "type": "string" },
+            "original": { "type": "string" },
+            "modern": { "type": "string" }
+          }
         }
       }
     },

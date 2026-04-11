@@ -6,6 +6,7 @@ import {
   CANONICAL_VIEWPORT_ROWS,
   USXD_SCHEMA_VERSION,
   canonicalCanvasPx,
+  resolveRetroForSingleLineInput,
 } from "@udos/shared";
 import {
   createHostClient,
@@ -217,17 +218,26 @@ export function App() {
   );
 
   const submit = useCallback(async () => {
-    const raw = draft.trim();
-    if (!raw) return;
+    const prepared = resolveRetroForSingleLineInput(draft);
+    if (!prepared.raw) return;
     setBusy(true);
     setError(null);
     try {
+      const metadata: Record<string, unknown> = {};
+      if (surfaceRef.trim()) {
+        metadata.surfaceRef = surfaceRef.trim();
+      }
+      if (prepared.wasRetroAlias) {
+        metadata.retroAlias = {
+          canonical: prepared.canonicalRetro,
+          original: prepared.originalLine,
+          modern: prepared.raw,
+        };
+      }
       await client.submitFeedItem({
-        raw,
+        raw: prepared.raw,
         source: "thinui",
-        ...(surfaceRef.trim()
-          ? { metadata: { surfaceRef: surfaceRef.trim() } }
-          : {}),
+        ...(Object.keys(metadata).length > 0 ? { metadata } : {}),
       });
       setDraft("");
       await refresh();
@@ -292,7 +302,7 @@ export function App() {
           <textarea
             className="input"
             rows={4}
-            placeholder="e.g. Research this topic and save a markdown note to the vault…"
+            placeholder="Notes or a single-line retro command (PEEK, DIR, POKE tool, …) — aliases expand to modern syntax…"
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             disabled={busy}
@@ -339,6 +349,21 @@ export function App() {
                         <code>{it.metadata.surfaceRef}</code>
                       </div>
                     ) : null}
+                    {(() => {
+                      const ra = it.metadata?.retroAlias as
+                        | {
+                            canonical?: string;
+                            modern?: string;
+                          }
+                        | undefined;
+                      if (!ra?.canonical || !ra?.modern) return null;
+                      return (
+                        <div className="feed-meta">
+                          retro: <code>{ra.canonical}</code> →{" "}
+                          <code>{ra.modern}</code>
+                        </div>
+                      );
+                    })()}
                     <div className="feed-raw">{it.raw}</div>
                   </li>
                 ))
