@@ -226,6 +226,7 @@ variables:
 The **complete** uCode v4 language — command DSL, scripting keywords, `POKE`/MCP, symbol rules, Go package layout, and future TypeScript `.mdx` bridge — is **locked** in uDosDev:
 
 - **[`UCODE_v4.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** (`~/Code/uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md`)
+- **[`UCODE_v4_addendum-quotes-markup-symbols.md`](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md)** — quotes, escapes, markup/HTML mapping, path backslashes, reserved `\\`, whitespace, continuation (**locked**)
 
 This document (**uDos Variables**) only defines **`$variable$` interpolation** in markdown surfaces and how namespaces map to family schemas. Session `LET` / inline `$x$` behaviour follows **UCODE v4** when the interpreter is present.
 
@@ -233,4 +234,4 @@ This document (**uDos Variables**) only defines **`$variable$` interpolation** i
 
 ## 11. One-line summary (this doc)
 
-**Inkdown `$...$` math stays.** **uDos Variables v4** adds `$VAR$` and dotted paths for core, contact, story, spatial, gameplay, and project keys — with frontmatter first; full **uCode v4** syntax and runtime are in **[UCODE_v4.md](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)**. **uDosGo** owns registry + MCP shape; Macdown/Chatdown/ThinUI are consumers.
+**Inkdown `$...$` math stays.** **uDos Variables v4** adds `$VAR$` and dotted paths for core, contact, story, spatial, gameplay, and project keys — with frontmatter first; full **uCode v4** syntax and runtime are in **[UCODE_v4.md](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4.md)** and **[UCODE_v4_addendum-quotes-markup-symbols.md](../../../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_addendum-quotes-markup-symbols.md)**. **uDosGo** owns registry + MCP shape; Macdown/Chatdown/ThinUI are consumers.
