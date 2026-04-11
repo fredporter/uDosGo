@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@udos/hivemind": "*"
+    "@udos/hivemind": "*",
+    "@udos/tui-ascii": "*"
   },
   "scripts": {
     "dev": "tsx watch src/index.ts",

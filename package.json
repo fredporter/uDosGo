@@ -31,7 +31,7 @@
     "host:start": "npm run start -w @udos/host",
     "host:dev": "npm run dev -w @udos/host",
     "thinui:dev": "npm run dev -w @udos/thinui",
-    "build": "npm run validate:usxd && npm run build -w @udos/shared && npm run build -w @udos/sdk && npm run build -w @udos/hivemind && npm run build -w @udos/host && npm run build -w @udos/thinui",
+    "build": "npm run validate:usxd && npm run build -w @udos/tui-ascii && npm run build -w @udos/shared && npm run build -w @udos/sdk && npm run build -w @udos/hivemind && npm run build -w @udos/host && npm run build -w @udos/thinui",
     "demo:seed": "node demo/scripts/seed.mjs",
     "demo:seed:dry": "node demo/scripts/seed.mjs --dry-run",
     "demo:seed:inbox": "node demo/scripts/seed.mjs --input sample-inputs/inbox-thread.txt",

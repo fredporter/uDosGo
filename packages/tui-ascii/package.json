@@ -1,0 +1,26 @@
+{
+  "name": "@udos/tui-ascii",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ASCII/TUI spinners, loaders, splash templates, and formula-driven line patterns (uDos TUI toolkit v1.0.0)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "udos-ascii-tool": "./dist/cli/ascii-tool.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3"
+  }
+}

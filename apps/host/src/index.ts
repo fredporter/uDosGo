@@ -7,6 +7,10 @@ import { createStores } from "./storage.js";
 import type { EventRecord, FeedItem } from "./storage.js";
 import { processFeedPipeline, rerunTask } from "./pipeline.js";
 import { pickFeedMetadata } from "./feed-metadata.js";
+import {
+  asciiPaletteCommands,
+  listAsciiPaletteCommands,
+} from "@udos/tui-ascii";
 
 const VERSION = "0.5.0";
 const PORT = Number(process.env.PORT) || 8787;
@@ -335,6 +339,19 @@ async function route(
       service: "udos-host",
       version: VERSION,
       dataRoot: DATA_ROOT,
+    });
+    return;
+  }
+
+  if (pathname === "/api/v1/meta/shell-palette" && method === "GET") {
+    const q = new URL(url, "http://127.0.0.1").searchParams.get("filter");
+    const commands = q?.trim()
+      ? listAsciiPaletteCommands(q)
+      : [...asciiPaletteCommands];
+    sendJson(res, req, 200, {
+      schemaVersion: "1.0.0",
+      source: "@udos/tui-ascii",
+      commands,
     });
     return;
   }

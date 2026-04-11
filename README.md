@@ -41,6 +41,7 @@ Not the whole uDOS family. Not the full product vision. **One clean loop.**
 | uCode v4 implementation lock (family) | [uDosDev `UCODE_v4_IMPLEMENTATION_LOCK.md`](../uDosConnect/uDosDev/docs/specs/v4/UCODE_v4_IMPLEMENTATION_LOCK.md) |
 | [docs/GRID-GRAPHICS-CANON.md](docs/GRID-GRAPHICS-CANON.md) | **Locked** 80×30, **16×24**, teletext bridge, UniversalSurfaceXD pairing |
 | [docs/style-guide.md](docs/style-guide.md) | **Style guide** — tokens, typography, USXD `usxd/0.1` frontmatter, ASCII vs teletext |
+| TUI — ASCII animation (family) | [uDosDev `TUI_ASCII_ANIMATION_TOOLKIT_v1.0.0.md`](../uDosConnect/uDosDev/docs/specs/TUI_ASCII_ANIMATION_TOOLKIT_v1.0.0.md) — **`packages/tui-ascii`** (`@udos/tui-ascii`); Host **`GET /api/v1/meta/shell-palette`**; Sonic **`sonic palette`** / **`sonic ascii`** |
 | [docs/DEMO.md](docs/DEMO.md) | Gold-path scenario, expected outputs, operator steps |
 | [docs/DATA-MODEL.md](docs/DATA-MODEL.md) | Persistence layout, schemas, truth model |
 | [docs/WP-BRIDGE.md](docs/WP-BRIDGE.md) | Empire ↔ WordPress bridge design |
